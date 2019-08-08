@@ -1,0 +1,45 @@
+2019-08-06 12:44:15,577 ERROR 32044 [-/127.0.0.1/-/10ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (E:\front-end\demo\egg\node_modules\egg\lib\application.js:266:15)
+    at Object.get cookies [as cookies] (E:\front-end\demo\egg\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (E:\front-end\demo\egg\node_modules\egg-security\app\extend\context.js:86:33)
+    at Object.ensureCsrfSecret (E:\front-end\demo\egg\node_modules\egg-security\app\extend\context.js:97:13)
+    at csrf (E:\front-end\demo\egg\node_modules\egg-security\lib\middlewares\csrf.js:14:9)
+    at dispatch (E:\front-end\demo\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at E:\front-end\demo\egg\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (E:\front-end\demo\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (E:\front-end\demo\egg\node_modules\koa-session\index.js:41:13)
+    at dispatch (E:\front-end\demo\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 32044
+hostname: denislin-PC0
+
+2019-08-06 12:45:42,361 ERROR 28068 [-/127.0.0.1/-/8ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (E:\front-end\demo\egg\node_modules\egg\lib\application.js:266:15)
+    at Object.get cookies [as cookies] (E:\front-end\demo\egg\node_modules\egg\app\extend\context.js:22:66)
+    at Object.get [egg-security#CSRF_SECRET] (E:\front-end\demo\egg\node_modules\egg-security\app\extend\context.js:86:33)
+    at Object.ensureCsrfSecret (E:\front-end\demo\egg\node_modules\egg-security\app\extend\context.js:97:13)
+    at csrf (E:\front-end\demo\egg\node_modules\egg-security\lib\middlewares\csrf.js:14:9)
+    at dispatch (E:\front-end\demo\egg\node_modules\egg-security\node_modules\koa-compose\index.js:42:32)
+    at E:\front-end\demo\egg\node_modules\egg-security\node_modules\koa-compose\index.js:34:12
+    at dispatch (E:\front-end\demo\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+    at session (E:\front-end\demo\egg\node_modules\koa-session\index.js:41:13)
+    at dispatch (E:\front-end\demo\egg\node_modules\koa\node_modules\koa-compose\index.js:42:32)
+
+pid: 28068
+hostname: denislin-PC0
+
+2019-08-06 12:52:26,086 ERROR 30148 [-/127.0.0.1/-/3ms GET /1] nodejs.TypeError: this.ctx.service.readFile is not a function
+    at HomeController.index (E:\front-end\demo\egg\app\controller\home.js:6:48)
+    at Object.callFn (E:\front-end\demo\egg\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (E:\front-end\demo\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (E:\front-end\demo\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (E:\front-end\demo\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (E:\front-end\demo\egg\node_modules\koa-compose\index.js:44:32)
+    at next (E:\front-end\demo\egg\node_modules\koa-compose\index.js:45:18)
+    at E:\front-end\demo\egg\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (E:\front-end\demo\egg\node_modules\koa-compose\index.js:44:32)
+    at E:\front-end\demo\egg\node_modules\koa-compose\index.js:36:12
+
+pid: 30148
+hostname: denislin-PC0
+

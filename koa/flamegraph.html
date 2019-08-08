@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>flamebearer</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<style>
+    html, body { height: 100%; }
+    body { font: 16px "Helvetica Neue", sans-serif; margin: 0; }
+    body.hover { background: #cfc; }
+    h1 { font-size: 30px; margin: 30px 30px 15px; }
+    h1 a { color: black; text-decoration: none; }
+    h1 a:hover { text-decoration: underline; }
+    #fire-icon { fill: #f53; width: 26px; height: 26px; vertical-align: -1px; }
+    #intro { margin: 0 30px; }
+    code { font-size: 13px; color: #444; }
+    code span { color: #aaa; }
+    #canvas { width: 100%; }
+    #controls { display: none; }
+    #search { margin-right: 10px; }
+    #highlight { position: absolute; pointer-events: none; background: #ffffff40; }
+    .loaded #intro { display: none; }
+    .loaded #header { display: flex; align-items: center; flex-flow: row wrap; padding: 7px 10px; }
+    .loaded h1 { font-size: 22px; margin: 0 auto 0 0; flex-shrink: 0; }
+    .loaded #fire-icon { width: 20px; height: 20px; }
+    .loaded #controls { display: block; flex-shrink: 0; }
+    #tooltip { position: absolute; pointer-events: none; background: #ffffff; white-space: nowrap; box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.3); border-radius: 2px; padding: 3px 5px; font: 12px Tahoma, sans-serif; display: none; }
+    #tooltip .path { color: #888; font-size: 11px; }
+    #tooltip .time { color: #4a4; }
+</style>
+</head>
+<body>
+
+<div id="header">
+    <h1><svg id="fire-icon" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15" style="enable-background:new 0 0 15 15;" xml:space="preserve"><path d="M7.5,0.5L5,4.5l-1.5-2 C2.9452,3.4753,0.8036,5.7924,0.8036,8.3036C0.8036,12.002,3.8017,15,7.5,15s6.6964-2.998,6.6964-6.6964 c0-2.5112-2.1416-4.8283-2.6964-5.8036l-1.5,2L7.5,0.5z M7.5,7c0,0,2.5,2.5618,2.5,4.5c0,0.8371-0.8259,2-2.5,2S5,12.3371,5,11.5 C5,9.6283,7.5,7,7.5,7z"/></svg> <a href="https://github.com/mapbox/flamebearer">flamebearer</a></h1>
+    <div id="controls">
+        <input id="search" placeholder="Search..." />
+        <button id="reset">Reset view</button>
+    </div>
+</div>
+<div id="highlight"></div>
+<div id="tooltip"></div>
+<div id="intro"><!--  --></div>
+<canvas id="canvas" height="0"></canvas>
+
+<!--  -->
+<script>'use strict';
+
+const introEl = document.getElementById('intro');
+const searchEl = document.getElementById('search');
+const highlightEl = document.getElementById('highlight');
+const tooltipEl = document.getElementById('tooltip');
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+let names, levels, numTicks;
+
+names = ["(unknown)","~(anonymous) :1:1","~(anonymous) :5:10","(lib) C:\u0000am Files\nodejs\node.exe","(unknown)","~bootstrapNodeJSCore internal/bootstrap/node.js:15:30","~startup internal/bootstrap/node.js:30:19","~setupProcessFatal internal/bootstrap/node.js:479:29","~NativeModule.require internal/bootstrap/loaders.js:150:34","~NativeModule.compile internal/bootstrap/loaders.js:303:44","~(anonymous) internal/async_hooks.js:1:11","~(anonymous) internal/errors.js:1:11","(lib) C:\u0000ws\u0000M32\ntdll.dll","~setupGlobalVariables internal/bootstrap/node.js:345:32","~(anonymous) util.js:1:11","~(anonymous) internal/util/inspect.js:1:11","~(anonymous) internal/util.js:1:11","~(anonymous) buffer.js:1:11","~createPool buffer.js:124:20","~createUnsafeArrayBuffer buffer.js:115:33","~(anonymous) internal/process/main_thread_only.js:1:11","~(anonymous) assert.js:1:11","~(anonymous) fs.js:1:11","~Module.runMain internal/modules/cjs/loader.js:816:26","~Module._load internal/modules/cjs/loader.js:557:24","~tryModuleLoad internal/modules/cjs/loader.js:590:23","~Module.load internal/modules/cjs/loader.js:645:33","~ok assert.js:345:12","~Module._extensions..js internal/modules/cjs/loader.js:785:37","~Module._compile internal/modules/cjs/loader.js:703:37","~(anonymous) E:\u0000-end\u0000oa-compared\u0000pp.js:1:1","~require internal/modules/cjs/helpers.js:22:19","~Module.require internal/modules/cjs/loader.js:684:36","~Module._resolveFilename internal/modules/cjs/loader.js:602:35","~Module._findPath internal/modules/cjs/loader.js:275:28","~tryPackage internal/modules/cjs/loader.js:212:20","~readPackage internal/modules/cjs/loader.js:191:21","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modulesë\u0000ndex.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modulesë\u0000ode.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modulesë\u0000ebug.js:1:1","~tryExtensions internal/modules/cjs/loader.js:247:23","~tryFile internal/modules/cjs/loader.js:232:17","~stat internal/modules/cjs/loader.js:85:14","~toNamespacedPath path.js:609:46","~resolve path.js:133:28","~normalizeString path.js:52:25","(bytecode) ~Star","(builtin) ObjectKeys","~pushValueToArray internal/bootstrap/node.js:339:30","(builtin) ArrayPrototypePush","~createDebug E:\u0000-end\u0000oa-compared\u0000ode_modulesë\u0000ebug.js:62:21","~selectColor E:\u0000-end\u0000oa-compared\u0000ode_modulesë\u0000ebug.js:43:21","~toRealPath internal/modules/cjs/loader.js:240:20","~realpathSync fs.js:1380:22","(builtin) Call_ReceiverIsAny","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules¬-content-type\u0000.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000types\u0000.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000db\u0000.js:1:1","~Module._extensions..json internal/modules/cjs/loader.js:792:39","~populateMaps E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000types\u0000.js:154:23","(builtin) ArrayForEach","~forEachMimeType E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000types\u0000.js:158:52","(builtin) KeyedLoadIC_Megamorphic","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000xt.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u000eates\u0000.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000est.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules೎ts\u0000.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000onvert\u0000.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000onvert\node_modules\u0000ompose\u0000.js:1:1","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000romise\u0000.js:1:1","~register E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000romise\u0000r.js:38:27","~loadImplementation E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000romise\u000eter.js:13:28","~onconnection net.js:1489:22","~Socket net.js:224:16","~initSocketHandle net.js:207:26","~getNewAsyncId net.js:117:23","(bytecode) ~LdaNamedProperty","~emit events.js:147:44","~connectionListener _http_server.js:319:28","~defaultTriggerAsyncIdScope internal/async_hooks.js:284:36","~connectionListenerInternal _http_server.js:325:36","~nowDate internal/http.js:8:17","~cache internal/http.js:18:15","(lib) C:\u0000ws\u0000m32\u000eL32.DLL","~Readable.read _stream_readable.js:377:35","~debug util.js:191:35","(bytecode) ~Return","~Socket._read net.js:526:34","(bytecode) ~StaNamedProperty","~Readable.on _stream_readable.js:825:33","~addListener events.js:271:58","~_addListener events.js:209:22","(bytecode) ~LdaKeyedProperty","~_tickCallback internal/process/next_tick.js:41:25","~emitAfterScript internal/async_hooks.js:354:25","~popAsyncIds internal/async_hooks.js:402:21","(builtin) KeyedLoadIC","~Socket.setTimeout net.js:404:39","~setUnrefTimeout internal/timers.js:111:25","~exports._unrefActive timers.js:157:32","~insert timers.js:167:16","~innerOk assert.js:317:17","(bytecode) ~JumpIfToBooleanTrue","~Duplex _stream_duplex.js:47:16","~Writable _stream_writable.js:203:18","(builtin) InterpreterEntryTrampoline","~alloc internal/freelist.js:13:8","~parsersCb _http_common.js:151:65","~cleanParser _http_common.js:224:21","(builtin) LoadIC_Noninlined","~shift internal/fixed_queue.js:104:8","~emitBeforeScript internal/async_hooks.js:340:26","(bytecode) ~LdaImmutableCurrentContextSlot","(bytecode) ~StackCheck","~Readable.resume _stream_readable.js:909:37","~resume _stream_readable.js:923:16","~nextTick internal/process/next_tick.js:96:20","(bytecode) ~Ldar","~httpSocketSetup _http_common.js:198:25","~Readable.removeListener _stream_readable.js:855:45","~removeListener events.js:315:28","(bytecode) ~JumpIfNotUndefined","~validateTimerDuration internal/timers.js:145:31","(bytecode) ~TestGreaterThan","(builtin) StoreIC","~Timeout internal/timers.js:55:17","~initAsyncResource internal/timers.js:45:27","(bytecode) ~CallUndefinedReceiver0","(bytecode) ~JumpIfFalse","~resume_ _stream_readable.js:930:17","~flow _stream_readable.js:954:14","(bytecode) ~JumpIfToBooleanFalse","Readable.on _stream_readable.js:825:33","~listenerCount events.js:452:23","(bytecode) ~TestTypeOf","onconnection net.js:1489:22","connectionListenerInternal _http_server.js:325:36","(bytecode) ~LdaSmi","(builtin) CallFunction_ReceiverIsAny","(bytecode) ~TestLessThan","~parserOnHeadersComplete _http_common.js:64:33","~parserOnIncoming _http_server.js:607:26","~handleRequest E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:131:27","~handleRequest E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:145:16","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ompose\u0000.js:31:19","~dispatch E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ompose\u0000.js:35:23","~app.use E:\u0000-end\u0000oa-compared\u0000pp.js:8:9","~onFinished E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:45:20","(bytecode) ~TestEqualStrict","(bytecode) ~SubSmi","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u000eates\u0000.js:71:40","~get query E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000est.js:172:12","~get querystring E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000est.js:196:18","~parseurl E:\u0000-end\u0000oa-compared\u0000ode_modules\nurl\u0000.js:35:19","~fastparse E:\u0000-end\u0000oa-compared\u0000ode_modules\nurl\u0000.js:95:20","(builtin) StringPrototypeSubstring","(builtin) AsyncFunctionAwaitResolveClosure","~readFileAfterRead internal/fs/read_file_context.js:8:27","~onParserExecute _http_server.js:483:25","~_unrefTimer net.js:332:52","~Timeout.refresh internal/timers.js:96:37","~handleResponse E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:149:28","~respond E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:199:17","~end _http_outgoing.js:674:45","~_finish _http_server.js:141:52","~_finish _http_outgoing.js:738:53","~_send _http_outgoing.js:212:49","~_writeRaw _http_outgoing.js:241:19","~getDefaultTriggerAsyncId internal/async_hooks.js:270:34","~Writable.uncork _stream_writable.js:309:37","~clearBuffer _stream_writable.js:500:21","~doWrite _stream_writable.js:405:17","~Socket._write net.js:724:35","~Socket._writeGeneric net.js:687:42","~append internal/linkedlist.js:29:16","~(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u000eates\u0000.js:91:40","(builtin) CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit","~set body E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:134:11","~set length E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:191:13","~set E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:438:6","(bytecode) ~LdaGlobal","~attachListener E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:140:24","~attachFinishedListener E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:90:32","~onSocket E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:106:20","~first E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:24:15","~socketOnWrap _http_server.js:725:22","(bytecode) ~Mov","~parserOnMessageComplete _http_common.js:128:33","~Readable.push _stream_readable.js:207:35","~readableAddChunk _stream_readable.js:232:26","~onEofChunk _stream_readable.js:496:20","~emitReadable _stream_readable.js:525:22","(bytecode) ~JumpIfNull","~writeGeneric internal/stream_base_commons.js:70:22","~handleWriteReq internal/stream_base_commons.js:12:24","(builtin) PromisePrototypeThen","~IncomingMessage _http_incoming.js:38:25","~Readable _stream_readable.js:149:18","~ReadableState _stream_readable.js:70:23","(bytecode) ~LogicalNot","~fn internal/util.js:272:14","(builtin) PromiseConstructor","~Promise internal/util.js:273:24","(builtin) RecordWrite","(builtin) ArgumentsAdaptorTrampoline","(builtin) AsyncFunctionPromiseCreate","~parse querystring.js:210:15","~assignSocket _http_server.js:173:62","(bytecode) ~CallProperty2","~endReadable _stream_readable.js:1112:21","~TickObject internal/process/next_tick.js:74:16","~set type E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:309:11","~get headerSent E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:224:17","~remove internal/linkedlist.js:15:16","resolve path.js:133:28","(builtin) LoadIC","(bytecode) ~LdaZero","~readFile fs.js:276:18","(builtin) StringAdd_CheckNone_NotTenured","(builtin) CreateGeneratorObject","~fresh E:\u0000-end\u0000oa-compared\u0000ode_modules\nurl\u0000.js:153:16","~ServerResponse _http_server.js:125:24","~OutgoingMessage _http_outgoing.js:68:25","(bytecode) ~StaKeyedProperty","(builtin) CallFunction_ReceiverIsNullOrUndefined","~read internal/fs/read_file_context.js:69:7","~readFileAfterOpen fs.js:233:27","~resetSocketTimeout _http_server.js:682:28","~Stream internal/streams/legacy.js:6:16","~EventEmitter events.js:26:22","~EventEmitter.init events.js:75:29","(builtin) KeyedLoadICTrampoline","~write_ _http_outgoing.js:570:16","~_implicitHeader _http_server.js:199:68","~writeHead _http_server.js:204:19","~_storeHeader _http_outgoing.js:285:22","~processHeader _http_outgoing.js:395:23","~storeHeader _http_outgoing.js:409:21","(bytecode) ~Add","~push internal/fixed_queue.js:95:7","afterWriteDispatched internal/stream_base_commons.js:76:30","~onwrite _stream_writable.js:450:17","_tickCallback internal/process/next_tick.js:41:25","~onFinish _http_outgoing.js:670:18","~onevent E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:81:26","~callback E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:53:20","~onFinish E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:95:20","~cleanup E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:58:19","~spliceOne internal/util.js:319:19","~close internal/fs/read_file_context.js:91:8","~matchHeader _http_outgoing.js:416:21","(anonymous) E:\u0000-end\u0000oa-compared\u0000ode_modules\u000eates\u0000.js:91:40","~set status E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:83:13","~resOnFinish _http_server.js:567:21","~clearTimeout timers.js:465:66","~module.exports.type E:\u0000-end\u0000oa-compared\u0000ode_modules¬-content-type\u0000.js:8:18","~listener E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:161:20","(bytecode) ~ForInContinue","~onwriteStateUpdate _stream_writable.js:443:28","(bytecode) ~CallProperty1","(bytecode) ~CreateRestParameter","(builtin) StringEqual","~endReadableNT _stream_readable.js:1122:23","emit events.js:147:44","~resetHeadersTimeoutOnReqEnd _http_server.js:738:37","~isUint32 internal/validators.js:13:18","(bytecode) ~LdaTrue","~setHeader _http_outgoing.js:468:57","(builtin) StringToLowerCaseIntl","(builtin) GetProperty","(bytecode) ~LdaFalse","_addListener events.js:209:22","(builtin) KeyedStoreIC_Megamorphic","~_addHeaderLines _http_incoming.js:110:25","~_addHeaderLine _http_incoming.js:277:24","parserOnIncoming _http_server.js:607:26","readFile fs.js:276:18","(builtin) StringPrototypeToLowerCaseIntl","~readFileAfterStat fs.js:249:27","~allocUnsafeSlow buffer.js:300:50","(bytecode) ~CallUndefinedReceiver1","~Writable.write _stream_writable.js:273:36","~isUint8Array internal/util/types.js:28:22","~args internal/util/types.js:11:10","(builtin) TypedArrayPrototypeToStringTag","~get header E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:47:13","~getHeaders _http_outgoing.js:502:59","~_dump _http_incoming.js:304:49","~Readable.removeAllListeners _stream_readable.js:871:49","~removeAllListeners events.js:371:32","~get _stream_duplex.js:119:6","nextTick internal/process/next_tick.js:96:20","(bytecode) ~LdaImmutableContextSlot","(bytecode) ~JumpIfTrue","end _http_outgoing.js:674:45","~detachSocket _http_server.js:183:62","app.use E:\u0000-end\u0000oa-compared\u0000pp.js:8:9","Socket.setTimeout net.js:404:39","Timeout internal/timers.js:55:17","(bytecode) ~Jump","set body E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:134:11","_unrefTimer net.js:332:52","parserOnHeadersComplete _http_common.js:64:33","readFileAfterStat fs.js:249:27","_storeHeader _http_outgoing.js:285:22","~validateHeaderValue _http_outgoing.js:454:29","~checkInvalidHeaderChar _http_common.js:220:32","writeHead _http_server.js:204:19","(regexp) [^\u0000-~-ÿ]","ok assert.js:345:12","(bytecode) ~LdaNull","~isBuffer buffer.js:429:36","first E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:24:15","matchKnownFields _http_incoming.js:141:26","flow _stream_readable.js:954:14","Readable.read _stream_readable.js:377:35","(stub) CallApiCallbackStub","(builtin) FastFunctionPrototypeBind","(builtin) RunMicrotasks","OutgoingMessage _http_outgoing.js:68:25","(builtin) PromiseFulfillReactionJob","_send _http_outgoing.js:212:49","(builtin) CallVarargs","cleanup E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:58:19","(builtin) DeleteProperty","(builtin) PromiseResolveTrampoline","(builtin) PromiseResolve","clearBuffer _stream_writable.js:500:21","resOnFinish _http_server.js:567:21","resume _stream_readable.js:923:16","(bytecode) ~LdaCurrentContextSlot","dispatch E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ompose\u0000.js:35:23","~Timeout.close timers.js:568:35","~unenroll timers.js:339:18","~reuse timers.js:322:15","setUnrefTimeout internal/timers.js:111:25","~readFileAfterClose internal/fs/read_file_context.js:31:28","byteLength buffer.js:509:20","createContext E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:160:16","(builtin) RegExpPrototypeTest","(builtin) KeyedStoreIC","attachFinishedListener E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:90:32","~stringToFlags internal/fs/utils.js:321:23","respond E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:199:17","(bytecode) ~CreateFunctionContext","~readStart _http_incoming.js:27:19","readFileAfterRead internal/fs/read_file_context.js:8:27","(builtin) TypedArrayInitializeWithBuffer","handleRequest E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:145:16","~original.call.values internal/util.js:274:36","(builtin) PromiseCapabilityDefaultResolve","(builtin) EnqueueMicrotask","(lib) C:\u0000ws\u0000m32\u00002.dll","resume_ _stream_readable.js:930:17","insert timers.js:167:16","arrayClone events.js:472:20","write_ _http_outgoing.js:570:16","(bytecode) ~JumpIfFalseConstant","(lib) C:\u0000ws\u0000m32\u0000ck.dll","(builtin) FulfillPromise","(bytecode) ~LdaConstant","(builtin) ResumeGeneratorTrampoline","(builtin) Call_ReceiverIsNullOrUndefined","(stub) JSEntryStub","Readable.removeAllListeners _stream_readable.js:871:49","(builtin) ToString","onevent E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:81:26","callback E:\u0000-end\u0000oa-compared\u0000ode_modules\u000erst\u0000.js:53:20","onFinish E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:95:20","parserOnMessageComplete _http_common.js:128:33","onParserExecute _http_server.js:483:25","pushValueToArray internal/bootstrap/node.js:339:30","(builtin) ResolvePromise","onSocket E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:106:20","(builtin) LoadICTrampoline","set E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:438:6","get query E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000est.js:172:12","readFileAfterClose internal/fs/read_file_context.js:31:28","unenroll timers.js:339:18","defaultTriggerAsyncIdScope internal/async_hooks.js:284:36","(builtin) GrowFastSmiOrObjectElements","(bytecode) ~Wide","(builtin) CallBoundFunction","Writable.write _stream_writable.js:273:36","handleRequest E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:131:27","~onStreamRead internal/stream_base_commons.js:87:22","~destroy internal/streams/destroy.js:4:17","~Socket._destroy net.js:584:37","addListener events.js:271:58","~emitErrorAndCloseNT internal/streams/destroy.js:58:29","~emitErrorNT internal/streams/destroy.js:90:21","~_handle.close net.js:604:24","~afterShutdown net.js:367:23","emitPromiseRejectionWarnings internal/process/promises.js:103:38","(builtin) CallWithArrayLike","~callFinal _stream_writable.js:616:19","~Socket._final net.js:342:35","~stream._final _stream_writable.js:617:17","~finishMaybe _stream_writable.js:640:21","~needFinish _stream_writable.js:609:20","~socketOnClose _http_server.js:434:23","~freeParser _http_common.js:174:20","~free internal/freelist.js:25:7","(builtin) FunctionPrototypeCall","(bytecode) ~CallUndefinedReceiver2","Readable.resume _stream_readable.js:909:37","~WritableState _stream_writable.js:54:23","~getHighWaterMark internal/streams/state.js:10:26","~highWaterMarkFrom internal/streams/state.js:5:27","(builtin) JSConstructStubGeneric","(builtin) CallFunction_ReceiverIsNotNullOrUndefined","(builtin) AsyncFunctionAwaitUncaught","~emitReadable_ _stream_readable.js:535:23","(builtin) InterpreterPushArgsThenConstruct","onFinished E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:45:20","Socket._writeGeneric net.js:687:42","~onerror E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u0000cation.js:148:21","~_flush _http_outgoing.js:763:51","~afterWrite _stream_writable.js:481:20","~onwriteDrain _stream_writable.js:492:22","(builtin) StringSubstring","(stub) ArrayConstructorStub","original.call.values internal/util.js:274:36","get writable E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:502:15","~isFinished E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:65:20","(builtin) CompileLazy","readFileAfterOpen fs.js:233:27","set type E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000ense.js:309:11","ServerResponse _http_server.js:125:24","listener E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:161:20","ReadableState _stream_readable.js:70:23","(builtin) JSBuiltinsConstructStub","(bytecode) ~CreateEmptyObjectLiteral","get method E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000ib\u000est.js:122:13","attachListener E:\u0000-end\u0000oa-compared\u0000ode_modules\u0000nished\u0000.js:140:24","(bytecode) ~CreateArrayLiteral","(builtin) StringPrototypeSlice","endReadableNT _stream_readable.js:1122:23","_extend util.js:290:17","(bytecode) ~ThrowReferenceErrorIfHole","(bytecode) ~ToBooleanLogicalNot","(bytecode) ~StaCurrentContextSlot","removeListener events.js:315:28","innerOk assert.js:317:17","onwrite _stream_writable.js:450:17","(builtin) FunctionPrototypeApply","removeAllListeners events.js:371:32","(builtin) StoreICTrampoline","(bytecode) ~CallUndefinedReceiver","(builtin) FastNewClosure","(builtin) KeyedLoadIC_PolymorphicName","(bytecode) ~CallProperty0","emitReadable_ _stream_readable.js:535:23","afterShutdown net.js:367:23","stream._final _stream_writable.js:617:17"];
+levels = [[0,1,0,0,2790,4],[0,1,1,0,16,3,0,6,4,0,16,5,0,2,12,0,20,74,0,11,95,0,5,107,0,35,137,0,2,140,0,73,142,0,357,158,0,4,159,0,5,160,0,1785,163,0,5,189,0,1,206,0,1,217,0,3,226,0,1,228,0,101,244,0,9,271,0,1,280,0,199,304,0,35,305,0,3,320,0,5,322,0,4,338,0,22,348,0,1,361,0,4,363,0,2,364,0,7,365,0,3,371,0,5,372,0,1,373,0,10,379,0,1,384,0,5,387,0,8,393,0,5,394,0,2,395,0,1,411,0,1,413,0,3,428,0,4,455],[0,1,2,16,1,4,0,2,78,0,1,265,0,1,452,0,1,453,0,16,6,2,7,75,0,13,79,0,4,96,0,3,112,0,2,113,0,2,131,4,1,305,0,20,75,0,13,80,0,1,107,0,1,411,2,1,107,0,1,126,0,2,133,0,49,143,0,1,182,0,6,198,0,1,205,0,1,240,0,1,275,0,10,277,0,12,148,0,345,298,0,1,78,0,1,227,0,2,251,0,4,161,0,1,303,0,2,55,0,81,164,0,1,294,0,1,339,0,1700,345,0,4,190,0,1,347,5,1,3,3,3,4,0,2,107,0,1,131,0,68,245,0,7,264,0,2,318,0,7,355,0,1,391,0,1,397,0,1,414,0,2,420,0,3,439,9,1,281,3,17,143,0,2,200,0,2,205,0,2,274,0,170,277,0,2,315,0,1,432,1,26,3,0,7,4,0,1,349,8,1,78,0,3,351,0,2,3,0,19,4,0,1,178,20,1,4,0,1,64,1,1,107,0,7,351,0,2,424,1,3,190,0,2,388,0,6,79,0,2,265,0,4,388,0,1,399,3,1,3,1,2,4,0,3,4,0,1,107],[0,1,3,16,1,451,2,1,4,2,1,7,0,1,8,0,2,13,0,12,23,2,1,76,0,1,77,0,2,86,0,1,90,0,1,91,0,1,105,0,13,80,0,1,55,0,3,97,0,1,55,0,1,107,0,1,115,0,1,107,0,1,114,0,1,86,0,1,132,5,3,77,0,1,86,0,12,105,0,1,182,0,1,217,0,1,405,0,1,440,0,4,81,0,9,381,8,25,79,0,1,91,0,1,92,0,1,188,0,5,209,0,5,223,0,2,229,0,9,265,1,1,126,0,5,199,2,1,276,1,1,205,0,1,229,0,7,265,0,1,3,0,1,126,0,2,177,0,8,253,0,7,3,0,6,4,0,330,178,0,1,274,0,1,342,1,1,78,0,2,3,0,3,162,0,1,194,0,1,64,2,3,152,0,21,165,0,1,206,0,55,296,0,1,313,7,1,55,0,2,64,0,1,140,0,164,172,0,1,217,0,1,220,0,1,265,0,2,323,0,1246,329,0,256,339,0,15,358,0,3,364,0,2,425,0,4,191,0,1,116,5,1,3,3,2,3,0,1,355,2,1,316,0,4,78,0,5,79,0,59,265,0,1,79,0,6,265,0,2,320,1,6,317,0,1,392,0,1,398,0,1,282,0,2,421,0,2,4,0,1,266,9,1,282,3,1,79,0,1,209,0,15,265,0,1,415,0,1,442,6,2,4,0,1,64,0,2,107,0,9,134,0,1,140,0,1,206,0,3,223,0,7,229,0,139,265,0,1,342,0,1,411,0,1,430,4,7,3,0,19,12,0,3,3,0,4,12,10,3,352,0,2,3,0,11,3,0,7,12,0,1,318,21,1,12,3,1,119,0,1,140,0,1,294,0,4,352,0,1,352,0,1,374,1,1,78,0,2,191,0,2,389,0,1,78,0,1,98,0,1,140,0,1,246,0,2,402,0,2,402,0,4,389,0,1,400,5,1,3,0,1,12,0,2,12,0,1,360,0,1,456],[0,1,3,19,1,247,2,1,8,0,1,9,0,2,8,0,12,24,2,1,77,0,1,3,0,1,87,0,1,89,1,1,92,0,1,106,0,13,81,1,1,94,0,1,98,0,1,151,5,1,211,0,1,86,5,2,3,0,1,136,0,1,406,0,4,106,0,8,199,3,1,64,0,3,138,0,1,139,0,6,82,0,3,138,8,25,144,0,1,92,0,1,233,1,1,126,0,3,187,0,1,210,0,5,224,0,1,99,0,1,261,0,9,144,2,4,200,0,1,230,2,1,263,2,1,299,0,7,144,0,1,12,1,2,178,0,2,3,0,6,178,0,7,3,0,6,3,0,2,107,0,11,213,0,313,302,0,3,429,0,1,445,4,2,3,0,3,101,4,1,64,0,1,98,0,1,140,0,1,140,0,1,166,0,3,168,0,8,171,0,8,234,3,1,64,0,4,172,0,4,234,0,1,323,0,41,329,0,2,339,0,1,271,11,1,78,0,163,173,2,1,217,0,2,381,1,1,3,0,1239,4,0,3,356,0,2,446,0,256,4,1,1,220,0,1,270,0,5,283,0,4,306,0,1,341,0,2,385,5,4,192,0,1,78,14,1,317,4,1,136,0,3,246,0,1,255,3,1,98,0,1,107,0,1,206,0,1,217,0,15,246,0,8,255,0,21,330,0,1,357,0,1,366,0,5,368,0,1,407,0,1,396,1,5,266,5,4,3,0,1,79,0,1,133,1,1,107,0,1,133,0,1,3,0,1,4,0,1,114,13,1,144,0,1,419,0,15,144,8,2,3,6,4,217,0,1,274,0,1,342,2,3,321,0,1,78,0,1,140,0,5,299,0,1,64,0,1,107,0,134,144,0,3,386,50,2,271,0,1,353,50,3,271,0,1,271,3,1,3,0,1,192,0,1,3,0,1,256,3,1,3,0,2,403,0,2,403,0,2,3,0,2,256,0,1,401],[20,1,55,2,1,9,0,1,20,0,2,9,0,12,25,2,1,78,0,1,3,0,1,88,0,1,3,1,1,93,0,1,107,0,13,82,9,1,118,0,1,133,5,1,3,0,1,178,2,1,230,0,1,271,0,2,408,0,1,78,0,5,200,0,1,230,0,1,271,4,3,99,1,1,3,0,1,107,0,1,120,0,1,134,0,1,319,0,1,407,0,1,120,0,1,134,0,1,299,8,25,145,0,1,273,3,3,91,1,1,78,0,1,90,0,1,205,0,1,225,0,1,230,0,1,100,1,9,145,2,2,126,0,1,201,0,1,268,0,1,231,5,1,300,0,7,145,2,1,179,0,1,213,0,2,3,0,4,179,0,2,213,15,1,47,0,5,181,0,2,257,0,3,377,3,1,3,0,9,48,0,1,107,0,295,339,0,3,341,0,1,367,1,1,263,0,1,341,7,3,102,8,1,167,0,3,169,0,8,172,0,1,78,0,1,107,0,2,168,0,4,235,4,4,173,0,4,235,0,1,81,0,1,3,0,40,4,0,2,4,13,1,126,0,162,174,4,1,293,1,1,3,0,154,3,0,1072,12,0,4,85,0,1,318,0,4,354,0,4,360,2,1,4,2,255,3,0,1,318,3,1,78,0,2,107,0,1,114,0,1,364,1,3,3,8,4,193,15,1,3,5,2,247,0,1,369,0,1,99,7,1,107,0,1,150,0,6,247,0,1,312,0,1,324,0,2,369,0,1,423,0,1,427,0,1,450,0,2,99,0,2,289,0,1,295,0,2,297,0,1,299,8,2,116,0,4,334,0,3,337,0,2,366,0,1,407,0,1,444,2,5,369,3,1,83,0,2,126,0,2,133,5,4,3,0,1,78,4,1,3,0,1,126,14,1,145,0,1,133,0,14,145,0,1,340,26,1,126,3,1,300,0,3,334,2,1,107,0,1,114,0,67,145,0,3,340,0,62,350,0,3,333,110,1,12,0,1,454,0,1,3,0,1,390,3,1,12,0,1,110,0,1,404,0,2,3,0,2,3,0,1,271,0,1,390,0,1,150],[23,1,10,0,1,8,0,2,14,0,12,26,5,1,3,1,1,111,1,1,83,0,2,91,0,4,99,0,1,108,0,3,120,0,1,126,0,1,134,9,1,212,10,1,107,1,1,119,0,1,409,1,1,3,0,1,78,0,1,107,0,1,409,0,1,441,0,1,231,5,2,100,0,1,124,1,1,3,1,1,107,0,1,64,2,1,55,0,1,3,0,1,4,8,1,78,0,18,146,0,5,149,0,1,197,0,1,274,3,2,92,0,1,111,5,1,231,0,1,127,1,7,146,0,2,149,6,1,232,6,6,146,0,1,149,2,1,180,0,1,181,2,1,180,0,2,254,0,1,287,0,1,181,0,1,257,16,3,78,0,1,214,0,1,269,0,1,78,0,1,140,0,1,3,0,2,341,3,1,3,2,7,3,2,294,4,2,1,310,11,1,107,0,1,126,0,1,176,8,1,78,0,2,81,0,1,292,0,8,173,2,2,169,0,4,236,4,4,174,0,1,107,0,2,236,0,1,309,0,1,262,0,1,3,0,1,3,0,39,12,0,2,3,14,2,78,0,9,175,0,151,417,1248,1,3,267,3,3,8,1,104,0,3,118,15,1,3,5,2,248,0,1,370,0,1,256,9,1,55,0,3,248,0,1,325,0,1,447,2,2,370,3,1,100,0,1,124,0,2,290,1,1,126,0,1,311,9,1,78,0,1,331,0,1,78,0,2,335,0,1,380,2,1,4,0,1,291,0,1,448,4,1,325,0,4,370,3,1,104,34,1,146,1,9,146,0,4,149,0,1,412,0,1,3,31,1,78,0,1,282,0,1,380,4,1,78,0,27,146,0,14,149,0,1,346,0,24,431,1,2,205,2,1,3,0,1,134,0,1,273,0,54,333,0,3,375,0,1,278,0,2,378,111,1,64,6,1,90,0,1,88,0,2,3],[23,1,8,0,1,9,0,2,8,0,1,27,0,11,28,9,1,84,0,1,92,0,1,116,0,3,100,0,1,124,0,1,109,0,3,121,1,1,135,9,1,3,13,1,410,1,1,3,2,1,410,1,1,232,5,1,101,0,1,127,0,1,140,8,1,3,0,1,12,9,1,119,0,17,147,0,1,150,0,4,183,5,1,93,0,1,272,6,1,232,0,1,3,1,7,147,0,2,183,6,1,182,6,6,147,0,1,183,2,1,181,0,1,214,2,1,181,0,1,27,0,1,126,0,1,288,0,1,269,0,1,206,19,1,78,0,1,307,2,1,3,8,7,3,2,294,3,16,1,215,9,2,118,0,1,78,0,8,174,2,2,283,0,4,237,4,4,175,1,2,306,0,1,310,60,7,4,0,2,416,1,1,3,0,148,4,0,1,433,1528,1,98,0,1,107,0,1,119,21,1,249,0,1,258,0,1,249,0,1,133,10,1,249,0,1,325,0,1,332,0,1,326,3,2,258,3,1,127,0,1,295,0,1,119,0,1,291,15,1,126,0,1,336,0,1,98,2,1,3,0,1,78,0,1,217,7,2,325,38,1,333,1,9,333,0,4,183,41,10,147,0,17,333,0,1,107,0,6,183,0,1,226,0,1,295,0,1,426,0,4,436,1,24,333,5,1,3,1,1,205,3,9,153,0,3,178,0,1,206,0,3,216,0,1,217,0,21,278,0,1,374,0,10,378,0,1,422,0,1,449,1,1,376,0,1,382,0,1,216,0,2,208],[23,1,9,0,1,21,0,2,9,0,1,3,0,11,29,9,1,3,0,1,93,0,1,117,0,1,101,0,2,127,0,1,125,0,1,110,0,2,122,0,1,130,1,1,136,9,1,3,13,1,119,4,1,64,1,1,126,5,1,102,0,1,130,21,1,119,0,16,148,1,4,184,5,1,107,7,1,88,2,7,148,0,1,78,0,1,184,13,2,148,0,4,298,0,1,107,2,1,182,0,1,3,2,1,269,0,1,262,1,1,98,0,1,270,21,1,308,330,1,126,9,1,170,0,1,241,1,8,175,2,1,107,0,1,284,0,3,238,0,1,259,4,2,78,0,1,107,0,1,303,2,1,3,61,7,4,0,2,4,1,1,3,0,3,3,0,145,12,1553,1,121,0,1,107,0,1,114,11,1,121,6,1,418,0,1,427,3,1,205,2,1,94,16,1,88,14,1,64,38,1,153,1,1,140,0,5,153,0,2,278,0,1,413,0,4,184,41,8,298,0,1,319,0,1,327,0,10,153,0,1,178,0,5,278,0,1,327,1,1,78,0,1,107,0,1,126,0,2,184,0,1,343,2,1,78,1,2,185,0,1,443,1,2,64,0,7,153,0,1,178,0,5,216,0,7,278,0,1,422,0,1,435,11,1,114,0,8,208,0,2,153,0,1,378,2,1,3,0,1,217,2,6,3,0,7,4,0,4,216,0,1,220,0,2,344,1,9,208,0,1,274,4,1,205,0,1,3,0,1,3,0,1,94],[23,1,11,0,1,8,0,1,15,0,1,17,0,1,12,0,11,30,9,1,85,0,1,94,0,1,118,0,1,102,0,2,128,1,1,3,0,1,107,0,1,123,39,1,141,23,1,3,0,1,78,0,7,152,0,4,202,0,1,207,0,1,216,0,1,221,1,1,78,0,3,185,16,3,152,0,2,202,0,1,216,0,1,220,1,1,3,13,1,152,0,1,202,0,2,153,0,1,216,0,1,278,0,1,50,3,1,3,2,1,279,25,1,78,340,1,98,0,1,78,1,2,161,0,6,195,3,1,285,0,3,239,8,1,4,2,1,3,61,7,12,0,2,12,1703,1,122,13,1,444,6,1,88,78,1,208,2,1,140,0,4,208,0,1,4,0,1,422,1,1,185,0,3,186,41,1,153,0,3,216,0,4,278,1,1,328,0,2,154,0,8,208,0,1,153,0,1,3,0,3,4,0,1,344,5,1,185,0,1,427,0,1,205,4,1,3,0,1,437,0,1,3,3,1,140,0,5,208,0,1,434,0,1,153,0,4,3,0,1,217,0,1,3,0,4,4,0,1,220,0,1,344,14,1,3,0,1,78,0,1,98,0,1,150,0,1,261,0,1,342,0,1,359,0,1,362,0,2,208,0,1,208,2,1,3,3,4,3,0,2,178,0,5,3,0,2,12,3,1,217,1,1,295,0,1,362,1,7,3,0,1,359,0,1,383,6,1,3,0,1,3],[23,1,3,0,1,9,0,1,8,0,1,18,1,11,31,11,1,119,0,1,27,0,1,107,0,1,129,1,1,3,65,1,3,1,7,153,0,4,203,1,1,217,3,2,122,0,1,186,16,3,153,0,2,203,3,1,3,13,1,153,0,1,203,0,2,208,0,1,3,378,1,133,0,1,162,0,1,196,0,5,242,3,1,286,0,1,240,0,2,252,8,1,318,1776,1,250,13,1,274,85,1,3,3,1,78,0,1,119,0,1,201,0,1,240,0,1,12,2,1,375,0,1,50,0,1,119,0,1,141,41,1,208,1,2,3,0,1,3,0,3,4,2,2,4,0,4,3,0,1,78,0,1,88,0,1,94,0,1,261,0,1,208,0,1,3,0,2,3,0,1,12,0,1,88,5,1,314,6,1,3,6,1,3,0,1,78,0,1,119,0,1,150,0,1,438,1,1,274,0,4,3,1,1,3,0,1,3,0,3,12,1,1,130,14,1,12,7,2,3,0,1,3,27,6,3,0,1,12],[23,1,12,0,1,22,0,1,9,0,1,19,1,11,32,12,1,103,71,3,154,0,4,208,0,4,204,5,2,78,0,1,187,16,3,208,0,2,204,17,1,208,0,1,204,0,1,130,0,1,301,0,1,3,379,1,101,0,1,150,0,5,243,5,1,150,0,1,263,1785,1,78,99,1,12,10,1,273,0,1,205,43,1,3,1,2,3,0,1,3,0,1,3,0,2,12,3,1,422,0,4,3,4,1,3,10,1,273,13,1,3,40,1,3,0,1,12,0,1,3],[24,1,3,0,1,16,0,1,3,1,11,24,12,1,104,71,3,155,0,3,3,0,1,218,0,1,205,0,1,206,0,2,219,7,1,91,16,1,3,0,2,78,0,2,219,17,1,3,0,1,278,382,1,102,1,1,78,0,1,104,0,1,119,0,1,260,0,1,293,1948,1,3,19,1,12],[24,1,3,0,1,3,0,1,3,1,10,25,0,1,33,84,1,107,0,1,156,0,1,222,0,2,3,0,1,12,3,2,44,7,1,92,16,1,12,2,1,44,0,1,267,17,1,3,0,1,4,382,1,176,4,1,78,0,1,205],[25,1,12,2,10,26,0,1,34,85,1,157,0,1,136,6,1,216,0,1,220,7,1,93,19,1,220,0,1,3,18,1,3,382,1,104],[28,10,28,0,1,35,102,1,78,20,1,3],[28,10,29,0,1,36],[28,10,37,0,1,3],[28,9,31,0,1,51,0,1,3],[28,9,32,0,1,52],[28,9,24,0,1,3],[28,8,25,0,1,33,0,1,12],[28,8,26,0,1,34],[28,8,28,0,1,41],[28,8,29,0,1,42],[28,2,38,0,3,56,0,1,65,0,1,67,0,1,69,0,1,53],[28,2,31,0,3,31,0,1,31,0,1,31,0,1,31,0,1,54],[28,2,32,0,3,32,0,1,32,0,1,32,0,1,32,0,1,55],[28,2,24,0,3,24,0,1,24,0,1,24,0,1,24],[28,2,25,0,3,25,0,1,25,0,1,25,0,1,25],[28,2,26,0,3,26,0,1,26,0,1,26,0,1,26],[28,2,28,0,3,28,0,1,28,0,1,28,0,1,28],[28,2,29,0,3,29,0,1,29,0,1,29,0,1,29],[28,2,39,0,3,57,0,1,66,0,1,68,0,1,70],[28,1,31,0,1,48,0,3,31,0,1,3,0,1,3,0,1,31],[28,1,32,0,1,3,0,3,32,0,1,3,0,1,3,0,1,32],[28,1,24,0,1,49,0,3,24,2,1,24],[28,1,25,0,1,50,0,3,25,2,1,25],[28,1,26,1,3,26,2,1,26],[28,1,28,1,3,28,2,1,28],[28,1,29,1,3,29,2,1,29],[28,1,40,1,3,58,2,1,71],[28,1,31,1,2,31,0,1,61,2,1,72],[28,1,32,1,2,32,0,1,62,2,1,73],[28,1,24,1,2,24,0,1,63,2,1,3],[28,1,33,1,2,25,0,1,64,2,1,3],[28,1,34,1,2,26],[28,1,41,1,2,28],[28,1,42,1,2,29],[28,1,43,1,2,59],[28,1,44,1,2,31],[28,1,45,1,2,32],[28,1,46,1,2,24],[28,1,47,1,2,25],[30,2,26],[30,2,60],[30,2,3],[30,2,3]];
+numTicks = 2791;
+
+let rangeMin = 0;
+let rangeMax = 1;
+let topLevel = 0;
+let query = '';
+let graphWidth, pxPerTick;
+
+const pxPerLevel = 18;
+const collapseThreshold = 5;
+const hideThreshold = 0.5;
+const labelThreshold = 20;
+
+highlightEl.style.height = pxPerLevel + 'px';
+
+if (levels) {
+    init();
+}
+
+function init() {
+    document.body.classList.add('loaded');
+
+    // delta-decode bar positions
+    for (const level of levels) {
+        let prev = 0;
+        for (let i = 0; i < level.length; i += 3) {
+            level[i] += prev;
+            prev = level[i] + level[i + 1];
+        }
+    }
+
+    updateFromHash();
+    render();
+}
+
+window.onhashchange = () => {
+    updateFromHash();
+    render();
+};
+canvas.onclick = (e) => {
+    const {i, j} = xyToBar(e.offsetX, e.offsetY);
+    if (j === -1) return;
+    window.location.hash = [i, j].join(',');
+    removeHover();
+};
+document.getElementById('reset').onclick = () => {
+    searchEl.value = query = '';
+    window.location.hash = '';
+    render();
+};
+window.onresize = render;
+
+searchEl.oninput = (e) => {
+    query = e.target.value;
+    render();
+};
+
+function updateFromHash() {
+    const [i, j] = window.location.hash.substr(1).split(',').map(Number);
+
+    if (!isNaN(i) && !isNaN(j)) {
+        topLevel = i;
+        rangeMin = levels[i][j] / numTicks;
+        rangeMax = (levels[i][j] + levels[i][j + 1]) / numTicks;
+    } else {
+        topLevel = 0;
+        rangeMin = 0;
+        rangeMax = 1;
+    }
+}
+
+function tickToX(i) {
+    return (i - numTicks * rangeMin) * pxPerTick;
+}
+
+function render() {
+    if (!levels) return;
+
+    graphWidth = canvas.width = canvas.clientWidth;
+    canvas.height = pxPerLevel * (levels.length - topLevel);
+    canvas.style.height = canvas.height + 'px';
+
+    if (devicePixelRatio > 1) {
+        canvas.width *= 2;
+        canvas.height *= 2;
+        ctx.scale(2, 2);
+    }
+
+    pxPerTick = graphWidth / numTicks / (rangeMax - rangeMin);
+
+    ctx.textBaseline = 'middle';
+    ctx.font = '10px Tahoma, sans-serif';
+    ctx.strokeStyle = 'white';
+
+    for (let i = 0; i < levels.length - topLevel; i++) {
+        const level = levels[topLevel + i];
+
+        for (let j = 0; j < level.length; j += 3) {
+            const barIndex = level[j];
+            const x = tickToX(barIndex);
+            const y = i * pxPerLevel;
+            let numBarTicks = level[j + 1];
+
+            const inQuery = query && (names[level[j + 2]].indexOf(query) >= 0) || false;
+
+            // merge very small blocks into big "collapsed" ones for performance
+            const collapsed = numBarTicks * pxPerTick <= collapseThreshold;
+            if (collapsed) {
+                while (
+                    j < level.length - 3 &&
+                    barIndex + numBarTicks === level[j + 3] &&
+                    level[j + 4] * pxPerTick <= collapseThreshold &&
+                    (inQuery === (query && (names[level[j + 5]].indexOf(query) >= 0) || false))
+                ) {
+                    j += 3;
+                    numBarTicks += level[j + 1];
+                }
+            }
+
+            const sw = numBarTicks * pxPerTick - (collapsed ? 0 : 0.5);
+            const sh = pxPerLevel - 0.5;
+
+            if (x < -1 || x + sw > graphWidth + 1 || sw < hideThreshold) continue;
+
+            ctx.beginPath();
+            ctx.rect(x, y, sw, sh);
+
+            const ratio = numBarTicks / numTicks;
+
+            if (!collapsed) {
+                ctx.stroke();
+                const intensity = Math.min(1, ratio * Math.pow(1.16, i) / (rangeMax - rangeMin));
+                const h = 50 - 50 * intensity;
+                const l = 65 + 7 * intensity;
+                ctx.fillStyle = inQuery ? 'lightgreen' : `hsl(${h}, 100%, ${l}%)`;
+            } else {
+                ctx.fillStyle = inQuery ? 'lightgreen' : '#eee';
+            }
+            ctx.fill();
+
+            if (!collapsed && sw >= labelThreshold) {
+
+                const percent = Math.round(10000 * ratio) / 100;
+                const name = `${names[level[j + 2]]} (${percent}%, ${numBarTicks} samples)`;
+
+                ctx.save();
+                ctx.clip();
+                ctx.fillStyle = 'black';
+                ctx.fillText(name, Math.max(x, 0) + 1, y + sh / 2);
+                ctx.restore();
+            }
+        }
+    }
+}
+
+// pixel coordinates to bar coordinates in the levels array
+function xyToBar(x, y) {
+    const i = Math.floor(y / pxPerLevel) + topLevel;
+    const j = binarySearchLevel(x, levels[i]);
+    return {i, j};
+}
+
+// binary search of a block in a stack level
+function binarySearchLevel(x, level) {
+    let i = 0;
+    let j = level.length - 3;
+    while (i <= j) {
+        const m = 3 * ((i / 3 + j / 3) >> 1);
+        const x0 = tickToX(level[m]);
+        const x1 = tickToX(level[m] + level[m + 1]);
+        if (x0 <= x && x1 >= x) {
+            return x1 - x0 > collapseThreshold ? m : -1;
+        }
+        if (x0 > x) {
+            j = m - 3;
+        } else {
+            i = m + 3;
+        }
+    }
+    return -1;
+}
+
+if (window.orientation === undefined) {
+    canvas.onmousemove = addHover;
+    canvas.onmouseout = window.onscroll = removeHover;
+}
+
+function removeHover() {
+    canvas.style.cursor = '';
+    highlightEl.style.display = 'none';
+    tooltipEl.style.display = 'none';
+}
+
+function addHover(e) {
+    const {i, j} = xyToBar(e.offsetX, e.offsetY);
+
+    if (j === -1 || e.offsetX < 0 || e.offsetX > graphWidth) {
+        removeHover();
+        return;
+    }
+
+    canvas.style.cursor = 'pointer';
+
+    const level = levels[i];
+    const x = tickToX(level[j]);
+    const y = (i - topLevel) * pxPerLevel;
+    const sw = tickToX(level[j] + level[j + 1]) - x;
+
+    highlightEl.style.display = 'block';
+    highlightEl.style.left = x + 'px';
+    highlightEl.style.top = (canvas.offsetTop + y) + 'px';
+    highlightEl.style.width = sw + 'px';
+
+    const numBarTicks = level[j + 1];
+    const percent = Math.round(10000 * numBarTicks / numTicks) / 100;
+    const time = `<span class="time">(${percent}%, ${numBarTicks} samples)</span>`;
+    let content = names[level[j + 2]];
+    if (content[0] !== '(') content = content.replace(' ', ` ${time}<br><span class="path">`) + '</span>';
+    else content += ` ${time}`;
+
+    tooltipEl.innerHTML = content;
+    tooltipEl.style.display = 'block';
+    tooltipEl.style.left = (Math.min(e.offsetX + 15 + tooltipEl.clientWidth, graphWidth) - tooltipEl.clientWidth) + 'px';
+    tooltipEl.style.top = (canvas.offsetTop + e.offsetY + 12) + 'px';
+}
+
+// (function frame() { if (levels) render(); requestAnimationFrame(frame); })();
+
+
+</script>
+</body>
+</html>

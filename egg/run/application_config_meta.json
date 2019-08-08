@@ -1,0 +1,260 @@
+{
+  "keys": "E:\\front-end\\egg-koa-compared\\egg\\config\\config.default.js",
+  "session": {
+    "maxAge": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+    "csrf": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xframe": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "env": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "name": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "version": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "description": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "main": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "test": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    },
+    "keywords": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "author": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "license": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "dependencies": {
+      "egg": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "strict": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "depth": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "env": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "level": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "logging": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "port": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\config.default.js"
+}
