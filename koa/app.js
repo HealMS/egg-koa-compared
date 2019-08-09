@@ -14,7 +14,9 @@ app.use(async (ctx, next) => {
 });
 
 app.on('error', (err, ctx) => {
-    console.error('server error', err, ctx);
+    // console.error('server error', err, ctx);
+    ctx.status = 429;
+    ctx.body = "too many request";
 });
 
 app.listen(7001);
