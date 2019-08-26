@@ -57,8 +57,9 @@ function handleResults(result) {
         invalidDataCount++;
         return;
     }
-    const { latency: {average, min, max}, errors, '2xx': total, connections, title } = result;
-    const partOfResult = {average, min, max, errors, '2xx': total, total:total+errors, connections, title};
+    const { latency: {average, min, max}, errors, throughput: {average: _throughput}, '2xx': total, connections, title } = result;
+    const partOfResult = {average, min, max, errors, throughput: _throughput, '2xx': total, total:total+errors, connections, title};
+    console.log(partOfResult);
     if (final_result == null) {
         final_result = partOfResult;
     } else {
