@@ -108,7 +108,7 @@ async function run(sizeList) {
             invalidDataCount = 0;
             for (let j=0; j<batch_size; j++) {  //多次取平均值
                 if (j !== 0) {
-                    await sleep(10000);
+                    await sleep(3000);
                     await makeAutocannon(autocannonList[i], handleResults)
                 } else {
                     await makeAutocannon(autocannonList[i], handleResults)
