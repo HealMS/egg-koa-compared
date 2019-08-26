@@ -43,3 +43,119 @@ hostname: denislin-PC0
 pid: 30148
 hostname: denislin-PC0
 
+70632019-08-10 21:14:13,071 ERROR 48868 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 48868
+hostname: denislin-PC0
+
+74822019-08-10 21:21:41,764 ERROR 39152 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 39152
+hostname: denislin-PC0
+
+75242019-08-10 21:23:38,065 ERROR 47572 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 47572
+hostname: denislin-PC0
+
+76682019-08-10 21:26:28,434 ERROR 47612 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 47612
+hostname: denislin-PC0
+
+2019-08-13 22:59:55,294 ERROR 61176 [-/127.0.0.1/-/6ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\egg-koa-compared\egg\app\controller\home.js:7:9)
+    at Object.callFn (F:\egg-koa-compared\egg\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\egg-koa-compared\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:44:32)
+    at next (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:45:18)
+    at F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:44:32)
+    at F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:36:12
+
+pid: 61176
+hostname: denislin-PC0
+
+2019-08-13 23:00:24,262 ERROR 60212 [-/127.0.0.1/-/8ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\egg-koa-compared\egg\app\controller\home.js:7:9)
+    at Object.callFn (F:\egg-koa-compared\egg\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\egg-koa-compared\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:44:32)
+    at next (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:45:18)
+    at F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:44:32)
+    at F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:36:12
+
+pid: 60212
+hostname: denislin-PC0
+
+2019-08-13 23:00:56,369 ERROR 49512 [-/127.0.0.1/-/7ms GET /] nodejs.ReferenceError: ctx is not defined
+    at HomeController.index (F:\egg-koa-compared\egg\app\controller\home.js:7:9)
+    at Object.callFn (F:\egg-koa-compared\egg\node_modules\egg-core\lib\utils\index.js:44:21)
+    at Object.classControllerMiddleware (F:\egg-koa-compared\egg\node_modules\egg-core\lib\loader\mixin\controller.js:87:20)
+    at Object.callFn (F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\utils.js:12:21)
+    at wrappedController (F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\egg_router.js:322:18)
+    at dispatch (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:44:32)
+    at next (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:45:18)
+    at F:\egg-koa-compared\egg\node_modules\@eggjs\router\lib\router.js:190:18
+    at dispatch (F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:44:32)
+    at F:\egg-koa-compared\egg\node_modules\koa-compose\index.js:36:12
+
+pid: 49512
+hostname: denislin-PC0
+
+2019-08-13 23:02:00,069 ERROR 62348 [-/127.0.0.1/-/9ms GET /] nodejs.AssertionError [ERR_ASSERTION]: Can't find undefined.nj from F:\egg-koa-compared\egg\app\view
+    at Map.resolve (F:\egg-koa-compared\egg\node_modules\egg-view\lib\view_manager.js:74:5)
+generatedMessage: false
+name: "AssertionError [ERR_ASSERTION]"
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 62348
+hostname: denislin-PC0
+

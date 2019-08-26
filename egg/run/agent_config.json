@@ -73,7 +73,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
+      "templatePath": "F:\\egg-koa-compared\\egg\\node_modules\\egg-onerror\\lib\\onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -84,10 +84,10 @@
       "cookieMaxAge": "1y"
     },
     "watcher": {
-      "type": "development",
+      "type": "default",
       "eventSources": {
-        "default": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\lib\\event-sources\\default",
-        "development": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\lib\\event-sources\\development"
+        "default": "F:\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\lib\\event-sources\\default",
+        "development": "F:\\egg-koa-compared\\egg\\node_modules\\egg-watcher\\lib\\event-sources\\development"
       }
     },
     "customLogger": {
@@ -115,13 +115,6 @@
         "cron": "0 30 4 * * *"
       }
     },
-    "development": {
-      "watchDirs": [],
-      "ignoreDirs": [],
-      "fastReady": false,
-      "reloadOnDebug": true,
-      "overrideDefault": false
-    },
     "logrotator": {
       "filesRotateByHour": null,
       "hourDelimiter": "-",
@@ -133,20 +126,28 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "E:\\front-end\\egg-koa-compared\\egg\\app\\public",
+      "dir": "F:\\egg-koa-compared\\egg\\app\\public",
       "dynamic": true,
       "preload": false,
-      "buffer": false,
-      "maxFiles": 1000
+      "buffer": true,
+      "maxFiles": 1000,
+      "maxAge": 31536000
     },
     "view": {
-      "root": "E:\\front-end\\egg-koa-compared\\egg\\app\\view",
-      "cache": false,
+      "root": "F:\\egg-koa-compared\\egg\\app\\view",
+      "cache": true,
       "defaultExtension": ".html",
-      "defaultViewEngine": "",
+      "defaultViewEngine": "nunjucks",
       "mapping": {}
     },
-    "env": "local",
+    "nunjucks": {
+      "autoescape": true,
+      "throwOnUndefined": false,
+      "trimBlocks": false,
+      "lstripBlocks": false,
+      "cache": true
+    },
+    "env": "prod",
     "name": "project",
     "keys": "<String len: 19>",
     "proxy": false,
@@ -160,6 +161,8 @@
       "description": "",
       "main": "index.js",
       "scripts": {
+        "start": "eggctl start --workers=1 --daemon",
+        "stop": "eggctl stop",
         "dev": "./node_modules/.bin/egg-bin dev",
         "test": "echo \"Error: no test specified\" && exit 1"
       },
@@ -167,15 +170,17 @@
       "author": "",
       "license": "ISC",
       "dependencies": {
-        "egg": "^2.23.0"
+        "egg": "^2.23.0",
+        "egg-scripts": "^2.11.0",
+        "egg-view-nunjucks": "^2.2.0"
       },
       "devDependencies": {
         "egg-bin": "^4.13.0"
       }
     },
-    "baseDir": "E:\\front-end\\egg-koa-compared\\egg",
+    "baseDir": "F:\\egg-koa-compared\\egg",
     "HOME": "C:\\Users\\denislin",
-    "rundir": "E:\\front-end\\egg-koa-compared\\egg\\run",
+    "rundir": "F:\\egg-koa-compared\\egg\\run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -206,21 +211,19 @@
       "onerror": "<Function onerror>"
     },
     "logger": {
-      "dir": "E:\\front-end\\egg-koa-compared\\egg\\logs\\project",
+      "dir": "C:\\Users\\denislin\\logs\\project",
       "encoding": "utf8",
-      "env": "local",
+      "env": "prod",
       "level": "INFO",
       "consoleLevel": "INFO",
-      "disableConsoleAfterReady": false,
+      "disableConsoleAfterReady": true,
       "outputJSON": false,
       "buffer": true,
       "appLogName": "project-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
-      "coreLogger": {
-        "consoleLevel": "WARN"
-      },
+      "coreLogger": {},
       "allowDebugAtProd": false,
       "type": "agent"
     },
@@ -281,8 +284,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-session",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-session",
       "version": "3.1.0"
     },
     "security": {
@@ -294,8 +297,8 @@
         "session"
       ],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-security",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-security",
       "version": "2.5.0"
     },
     "jsonp": {
@@ -307,8 +310,8 @@
         "security"
       ],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-jsonp",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -320,8 +323,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-onerror",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -331,8 +334,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-i18n",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -342,8 +345,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-watcher",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-watcher",
       "version": "3.1.0"
     },
     "schedule": {
@@ -353,8 +356,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-schedule",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -366,24 +369,9 @@
         "schedule"
       ],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-multipart",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-multipart",
       "version": "2.8.0"
-    },
-    "development": {
-      "enable": true,
-      "package": "egg-development",
-      "name": "development",
-      "dependencies": [
-        "watcher"
-      ],
-      "optionalDependencies": [],
-      "env": [
-        "local"
-      ],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-development",
-      "version": "2.4.3"
     },
     "logrotator": {
       "enable": true,
@@ -394,8 +382,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-logrotator",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -405,8 +393,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-static",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -416,9 +404,23 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
-      "path": "E:\\front-end\\egg-koa-compared\\egg\\node_modules\\egg-view",
+      "from": "F:\\egg-koa-compared\\egg\\node_modules\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-view",
       "version": "2.1.2"
+    },
+    "nunjucks": {
+      "enable": true,
+      "package": "egg-view-nunjucks",
+      "name": "nunjucks",
+      "dependencies": [
+        "security",
+        "view"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "F:\\egg-koa-compared\\egg\\config\\plugin.js",
+      "path": "F:\\egg-koa-compared\\egg\\node_modules\\egg-view-nunjucks",
+      "version": "2.2.0"
     }
   }
 }

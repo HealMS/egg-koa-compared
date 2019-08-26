@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "eggctl start --workers=1 --daemon",
+    "stop": "eggctl stop",
     "dev": "./node_modules/.bin/egg-bin dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,7 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "egg": "^2.23.0"
+    "egg": "^2.23.0",
+    "egg-scripts": "^2.11.0",
+    "egg-view-nunjucks": "^2.2.0"
   },
   "devDependencies": {
     "egg-bin": "^4.13.0"

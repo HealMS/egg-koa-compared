@@ -1,0 +1,19 @@
+[
+	{"average":"145.89","min":"58.50","max":"5013.15","errors":"0.00","total":"18023.70","connections":1000,"title":"10","success2":1},
+	{"average":"193.18","min":"134.90","max":"5015.23","errors":"0.00","total":"17631.80","connections":2000,"title":"10","success":1},
+	{"average":"226.85","min":"173.60","max":"5055.81","errors":"0.00","total":"17829.40","connections":3000,"title":"10","success":1},
+	{"average":"295.60","min":"244.90","max":"5048.11","errors":"0.00","total":"17484.30","connections":4000,"title":"10","success":1},
+	{"average":"358.60","min":"312.30","max":"5076.45","errors":"0.00","total":"17904.50","connections":5000,"title":"10","success":1},
+	{"average":"432.45","min":"375.50","max":"5082.34","errors":"0.00","total":"17509.80","connections":6000,"title":"10","success":1},
+	{"average":"472.73","min":"419.60","max":"5134.81","errors":"0.00","total":"17198.70","connections":7000,"title":"10","success":1},
+	{"average":"541.17","min":"476.80","max":"5114.88","errors":"0.00","total":"17241.90","connections":8000,"title":"10","success":1},
+	{"average":"563.58","min":"498.50","max":"5145.52","errors":"0.00","total":"17038.40","connections":9000,"title":"10","success":1},
+	{"average":"631.00","min":"556.70","max":"5138.51","errors":"0.00","total":"16855.50","connections":10000,"title":"10","success":1},
+	{"average":"712.96","min":"627.50","max":"5132.14","errors":"0.00","total":"16806.50","connections":11000,"title":"10","success":1},
+	{"average":"1643.46","min":"1386.50","max":"5086.51","errors":"167.90","total":"15032.70","connections":12000,"title":"10","success":0.9888310150538493},
+	{"average":"4392.75","min":"3341.50","max":"7359.11","errors":"3784.60","total":"15785.30","connections":13000,"title":"10","success":0.7602452915053879},
+	{"average":"13405.33","min":"11753.29","max":"16025.24","errors":"22013.00","total":"25584.14","connections":14000,"title":"10","success":0.13958413298238673},
+	{"average":"31071.11","min":"27802.71","max":"40001.93","errors":"38209.14","total":"40549.86","connections":15000,"title":"10","success":0.057724490294171205},
+	{"average":"31619.33","min":"30197.60","max":"35276.40","errors":"44706.60","total":"48838.00","connections":16000,"title":"10","success":0.08459396371677795},
+	{"average":"30496.99","min":"30301.00","max":"31407.47","errors":"44684.40","total":"49828.40","connections":17000,"title":"10","success":0.103234300118005}
+]

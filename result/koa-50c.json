@@ -1,0 +1,16 @@
+[
+	{"average":"110.91","min":"31.90","max":"639.43","average2":"132.16","min2":"39.40","max2":"708.08","errors":"0.00","total":"44584.40","total2":"37432.70","connections":1000,"title":"50","success":1,"success2":1},
+	{"average":"235.98","min":"58.20","max":"2282.42","average2":"283.18","min2":"70.10","max2":"2856.62","errors":"0.00","total":"41559.20","total2":"34565.40","connections":2000,"title":"50","success":1,"success2":1},
+	{"average":"340.21","min":"59.30","max":"4988.38","average2":"381.87","min2":"85.80","max2":"5009.10","errors":"0.00","total":"40813.40","total2":"33880.20","connections":3000,"title":"50","success":1,"success2":1},
+	{"average":"376.10","min":"95.60","max":"5024.12","average2":"432.89","min2":"151.00","max2":"5027.00","errors":"0.00","total":"40730.40","total2":"33745.40","connections":4000,"title":"50","success":1,"success2":1},
+	{"average":"418.69","min":"154.10","max":"5042.92","average2":"460.05","min2":"188.30","max2":"5052.41","errors":"0.00","total":"40642.80","total2":"33591.20","connections":5000,"title":"50","success":1,"success2":1},
+	{"average":"459.61","min":"204.90","max":"5061.33","average2":"487.10","min2":"206.20","max2":"5072.29","errors":"0.00","total":"40435.70","total2":"33346.70","connections":6000,"title":"50","success":1,"success2":1},
+	{"average":"486.34","min":"210.10","max":"5086.31","average2":"527.95","min2":"233.00","max2":"5105.06","errors":"0.00","total":"40017.80","total2":"33267.50","connections":7000,"title":"50","success":1,"success2":1},
+	{"average":"502.96","min":"232.70","max":"5105.90","average2":"571.28","min2":"273.20","max2":"5120.34","errors":"0.00","total":"39974.70","total2":"33002.80","connections":8000,"title":"50","success":1,"success2":1},
+	{"average":"539.15","min":"254.60","max":"5125.78","average2":"578.90","min2":"277.10","max2":"5155.92","errors":"0.00","total":"39662.40","total2":"33117.70","connections":9000,"title":"50","success":1,"success2":1},
+	{"average":"588.87","min":"288.20","max":"5143.45","average2":"626.15","min2":"303.80","max2":"5160.23","errors":"0.00","total":"39174.90","total2":"32467.10","connections":10000,"title":"50","success":1,"success2":1},
+	{"average":"584.83","min":"273.00","max":"5184.30","average2":"659.96","min2":"318.10","max2":"5193.90","errors":"0.00","total":"39230.70","total2":"32133.80","connections":11000,"title":"50","success":1,"success2":1},
+	{"average":"7293.48","min":"5027.40","max":"10659.91","average2":"747.14","min2":"427.50","max2":"5209.04","errors":"6657.20","total":"33351.90","total2":"31915.80","connections":12000,"title":"50","success":0.8003951798848041,"success2":1},
+	{"average":"13622.12","min":"11546.20","max":"28127.51","average2":"1206.89","min2":"818.30","max2":"5293.20","errors":"27382.70","total":"40450.50","total2":"28752.70","connections":13000,"title":"50","success":0.3230565753204534,"success2":0.9932910648391281},
+	{"average":"15584.64","min":"12205.10","max":"18950.03","average2":"6128.63","min2":"3952.10","max2":"8425.81","errors":"36060.80","total":"44614.80","total2":"16039.60","connections":14000,"title":"50","success":0.1917300985323256,"success2":0.7286653033741489}
+]

@@ -310,3 +310,93 @@
 2019-08-08 17:07:30,903 INFO 22336 [egg-schedule]: register schedule E:\front-end\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
 2019-08-08 17:07:30,903 INFO 22336 [egg-schedule]: register schedule E:\front-end\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
 2019-08-08 17:07:30,903 INFO 22336 [egg-schedule]: register schedule E:\front-end\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:01,503 INFO 21000 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:01,503 INFO 21000 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:01,503 INFO 21000 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:01,525 INFO 47472 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:01,525 INFO 47472 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:01,525 INFO 47472 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:01,874 INFO 4084 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:01,874 INFO 4084 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:01,874 INFO 4084 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:02,117 INFO 42204 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:02,117 INFO 42204 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:02,117 INFO 42204 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:02,449 INFO 39828 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:02,449 INFO 39828 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:02,449 INFO 39828 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:02,444 INFO 46880 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:02,444 INFO 46880 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:02,444 INFO 46880 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:03,322 INFO 21152 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 26276681ms at 2019-08-11 04:30:00.003
+2019-08-10 21:12:03,323 INFO 21152 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 10076677ms at 2019-08-11 00:00:00.000
+2019-08-10 21:12:03,323 INFO 21152 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 10077677ms at 2019-08-11 00:00:01.000
+2019-08-10 21:12:02,824 INFO 16012 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:02,824 INFO 16012 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:02,824 INFO 16012 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:12:03,104 INFO 47572 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:12:03,104 INFO 47572 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:12:03,104 INFO 47572 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:32:29,620 INFO 5232 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 25050385ms at 2019-08-11 04:30:00.005
+2019-08-10 21:32:29,620 INFO 5232 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 8850380ms at 2019-08-11 00:00:00.000
+2019-08-10 21:32:29,621 INFO 5232 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 8851380ms at 2019-08-11 00:00:01.001
+2019-08-10 21:32:29,509 INFO 5232 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:32:29,510 INFO 5232 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:32:29,510 INFO 5232 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:40:05,870 INFO 47820 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 24594133ms at 2019-08-11 04:30:00.003
+2019-08-10 21:40:05,870 INFO 47820 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 8394130ms at 2019-08-11 00:00:00.000
+2019-08-10 21:40:05,870 INFO 47820 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 8395130ms at 2019-08-11 00:00:01.000
+2019-08-10 21:40:05,749 INFO 44616 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:40:05,749 INFO 44616 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:40:05,749 INFO 44616 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:43:57,165 INFO 49288 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-10 21:43:57,165 INFO 49288 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-10 21:43:57,165 INFO 49288 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-10 21:43:57,289 INFO 49956 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 24362714ms at 2019-08-11 04:30:00.003
+2019-08-10 21:43:57,290 INFO 49956 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 8162710ms at 2019-08-11 00:00:00.000
+2019-08-10 21:43:57,290 INFO 49956 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 8163710ms at 2019-08-11 00:00:01.000
+2019-08-13 22:58:03,328 INFO 58972 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 19916676ms at 2019-08-14 04:30:00.004
+2019-08-13 22:58:03,328 INFO 58972 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 3716672ms at 2019-08-14 00:00:00.000
+2019-08-13 22:58:03,328 INFO 58972 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 3717672ms at 2019-08-14 00:00:01.000
+2019-08-13 22:58:03,139 INFO 63688 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 22:58:03,140 INFO 63688 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 22:58:03,140 INFO 63688 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 22:59:09,771 INFO 56496 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 19850233ms at 2019-08-14 04:30:00.004
+2019-08-13 22:59:09,771 INFO 56496 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 3650229ms at 2019-08-14 00:00:00.000
+2019-08-13 22:59:09,771 INFO 56496 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 3651229ms at 2019-08-14 00:00:01.000
+2019-08-13 22:59:09,613 INFO 61176 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 22:59:09,613 INFO 61176 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 22:59:09,613 INFO 61176 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:00:23,346 INFO 60212 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:00:23,346 INFO 60212 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:00:23,346 INFO 60212 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:00:25,033 INFO 62888 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:00:25,033 INFO 62888 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:00:25,033 INFO 62888 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:00:35,510 INFO 61524 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:00:35,510 INFO 61524 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:00:35,510 INFO 61524 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:00:36,797 INFO 61756 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:00:36,797 INFO 61756 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:00:36,797 INFO 61756 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:00:47,114 INFO 61056 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 19752889ms at 2019-08-14 04:30:00.003
+2019-08-13 23:00:47,114 INFO 61056 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 3552886ms at 2019-08-14 00:00:00.000
+2019-08-13 23:00:47,115 INFO 61056 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 3553886ms at 2019-08-14 00:00:01.001
+2019-08-13 23:00:46,996 INFO 49512 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:00:46,997 INFO 49512 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:00:46,997 INFO 49512 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:01:08,707 INFO 62748 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:01:08,707 INFO 62748 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:01:08,707 INFO 62748 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:01:10,254 INFO 56092 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:01:10,254 INFO 56092 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:01:10,254 INFO 56092 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:01:25,735 INFO 43012 [Timer] F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js next time will execute after 19714269ms at 2019-08-14 04:30:00.004
+2019-08-13 23:01:25,735 INFO 43012 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js next time will execute after 3514265ms at 2019-08-14 00:00:00.000
+2019-08-13 23:01:25,735 INFO 43012 [Timer] F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js next time will execute after 3515265ms at 2019-08-14 00:00:01.000
+2019-08-13 23:01:25,616 INFO 62348 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:01:25,616 INFO 62348 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:01:25,616 INFO 62348 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js
+2019-08-13 23:02:38,491 INFO 62260 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-multipart\app\schedule\clean_tmpdir.js
+2019-08-13 23:02:38,491 INFO 62260 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\clean_log.js
+2019-08-13 23:02:38,491 INFO 62260 [egg-schedule]: register schedule F:\egg-koa-compared\egg\node_modules\egg-logrotator\app\schedule\rotate_by_file.js

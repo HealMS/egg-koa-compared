@@ -696,3 +696,254 @@
 2019-08-08 17:07:29,690 INFO 40172 [egg-watcher] Start watching: "E:\\front-end\\egg-koa-compared\\egg\\app.js"
 2019-08-08 17:07:29,690 INFO 40172 [egg-watcher:agent] watcher start success
 2019-08-08 17:07:29,701 INFO 40172 [egg:core] dump config after ready, 4ms
+2019-08-10 21:11:59,326 INFO 21152 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:11:59,335 INFO 21152 [egg:core] dump config after load, 4ms
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:11:59,409 INFO 21152 [egg-watcher:agent] watcher start success
+2019-08-10 21:11:59,421 INFO 21152 [egg:core] dump config after ready, 5ms
+2019-08-10 21:14:12,959 INFO 48868 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:14:12,975 INFO 48868 [egg:core] dump config after load, 6ms
+2019-08-10 21:14:13,084 ERROR 48868 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 48868
+hostname: denislin-PC0
+
+2019-08-10 21:14:13,118 INFO 48868 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:14:13,118 INFO 48868 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:14:13,119 INFO 48868 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:14:13,119 INFO 48868 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:14:13,119 INFO 48868 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:14:13,119 INFO 48868 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:14:13,120 INFO 48868 [egg-watcher:agent] watcher start success
+2019-08-10 21:14:13,137 INFO 48868 [egg:core] dump config after ready, 4ms
+2019-08-10 21:21:41,705 INFO 39152 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:21:41,721 INFO 39152 [egg:core] dump config after load, 5ms
+2019-08-10 21:21:41,773 ERROR 39152 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 39152
+hostname: denislin-PC0
+
+2019-08-10 21:21:41,787 INFO 39152 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:21:41,787 INFO 39152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:21:41,788 INFO 39152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:21:41,788 INFO 39152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:21:41,788 INFO 39152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:21:41,788 INFO 39152 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:21:41,788 INFO 39152 [egg-watcher:agent] watcher start success
+2019-08-10 21:21:41,801 INFO 39152 [egg:core] dump config after ready, 5ms
+2019-08-10 21:23:38,011 INFO 47572 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:23:38,027 INFO 47572 [egg:core] dump config after load, 5ms
+2019-08-10 21:23:38,074 ERROR 47572 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 47572
+hostname: denislin-PC0
+
+2019-08-10 21:23:38,089 INFO 47572 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:23:38,089 INFO 47572 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:23:38,089 INFO 47572 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:23:38,089 INFO 47572 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:23:38,089 INFO 47572 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:23:38,090 INFO 47572 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:23:38,090 INFO 47572 [egg-watcher:agent] watcher start success
+2019-08-10 21:23:38,107 INFO 47572 [egg:core] dump config after ready, 8ms
+2019-08-10 21:26:28,370 INFO 47612 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:26:28,387 INFO 47612 [egg:core] dump config after load, 6ms
+2019-08-10 21:26:28,445 ERROR 47612 nodejs.TypeError [ERR_INVALID_FD_TYPE]: Unsupported fd type: FILE
+    at createHandle (net.js:113:9)
+    at new Socket (net.js:266:20)
+    at signal (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:17:13)
+    at EventEmitter.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\0x\lib\preload\detect-port.js:11:3)
+    at EventEmitter.emit (events.js:198:13)
+    at Server.<anonymous> (E:\nvm\v10.16.0\node_modules\clinic\node_modules\on-net-listen\index.js:16:25)
+    at Object.onceWrapper (events.js:286:20)
+    at Server.emit (events.js:203:15)
+    at emitListeningNT (net.js:1313:10)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+
+pid: 47612
+hostname: denislin-PC0
+
+2019-08-10 21:26:28,472 INFO 47612 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:26:28,472 INFO 47612 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:26:28,473 INFO 47612 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:26:28,473 INFO 47612 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:26:28,473 INFO 47612 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:26:28,473 INFO 47612 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:26:28,473 INFO 47612 [egg-watcher:agent] watcher start success
+2019-08-10 21:26:28,487 INFO 47612 [egg:core] dump config after ready, 5ms
+2019-08-10 21:32:29,295 INFO 5232 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:32:29,319 INFO 5232 [egg:core] dump config after load, 7ms
+2019-08-10 21:32:29,356 INFO 5232 [egg-watcher:agent] watcher start success
+2019-08-10 21:32:29,374 INFO 5232 [egg:core] dump config after ready, 5ms
+2019-08-10 21:40:04,649 INFO 47820 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:40:04,661 INFO 47820 [egg:core] dump config after load, 5ms
+2019-08-10 21:40:04,705 INFO 47820 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:40:04,705 INFO 47820 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:40:04,706 INFO 47820 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:40:04,706 INFO 47820 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:40:04,706 INFO 47820 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:40:04,706 INFO 47820 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:40:04,706 INFO 47820 [egg-watcher:agent] watcher start success
+2019-08-10 21:40:04,724 INFO 47820 [egg:core] dump config after ready, 5ms
+2019-08-10 21:43:56,137 INFO 49956 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 21:43:56,147 INFO 49956 [egg:core] dump config after load, 4ms
+2019-08-10 21:43:56,183 INFO 49956 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 21:43:56,183 INFO 49956 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 21:43:56,183 INFO 49956 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 21:43:56,183 INFO 49956 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 21:43:56,184 INFO 49956 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 21:43:56,184 INFO 49956 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 21:43:56,184 INFO 49956 [egg-watcher:agent] watcher start success
+2019-08-10 21:43:56,194 INFO 49956 [egg:core] dump config after ready, 4ms
+2019-08-10 22:14:40,066 INFO 41920 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 22:14:40,077 INFO 41920 [egg:core] dump config after load, 4ms
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 22:14:40,117 INFO 41920 [egg-watcher:agent] watcher start success
+2019-08-10 22:15:08,087 INFO 48496 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 22:15:08,101 INFO 48496 [egg:core] dump config after load, 7ms
+2019-08-10 22:15:08,142 INFO 48496 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 22:15:08,142 INFO 48496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 22:15:08,142 INFO 48496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 22:15:08,142 INFO 48496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 22:15:08,142 INFO 48496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 22:15:08,142 INFO 48496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 22:15:08,143 INFO 48496 [egg-watcher:agent] watcher start success
+2019-08-10 22:15:41,607 INFO 50036 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 22:15:41,617 INFO 50036 [egg:core] dump config after load, 5ms
+2019-08-10 22:15:41,655 INFO 50036 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 22:15:41,655 INFO 50036 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 22:15:41,655 INFO 50036 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 22:15:41,656 INFO 50036 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 22:15:41,656 INFO 50036 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 22:15:41,656 INFO 50036 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 22:15:41,656 INFO 50036 [egg-watcher:agent] watcher start success
+2019-08-10 22:18:57,123 INFO 35860 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-10 22:18:57,131 INFO 35860 [egg:core] dump config after load, 3ms
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-10 22:18:57,172 INFO 35860 [egg-watcher:agent] watcher start success
+2019-08-13 22:58:01,533 INFO 58972 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-13 22:58:01,546 INFO 58972 [egg:core] dump config after load, 7ms
+2019-08-13 22:58:01,623 INFO 58972 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-13 22:58:01,623 INFO 58972 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-13 22:58:01,623 INFO 58972 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-13 22:58:01,624 INFO 58972 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-13 22:58:01,624 INFO 58972 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-13 22:58:01,624 INFO 58972 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-13 22:58:01,624 INFO 58972 [egg-watcher:agent] watcher start success
+2019-08-13 22:58:01,674 INFO 58972 [egg:core] dump config after ready, 6ms
+2019-08-13 22:59:08,562 INFO 56496 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-13 22:59:08,573 INFO 56496 [egg:core] dump config after load, 4ms
+2019-08-13 22:59:08,611 INFO 56496 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-13 22:59:08,611 INFO 56496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-13 22:59:08,612 INFO 56496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-13 22:59:08,612 INFO 56496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-13 22:59:08,612 INFO 56496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-13 22:59:08,612 INFO 56496 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-13 22:59:08,612 INFO 56496 [egg-watcher:agent] watcher start success
+2019-08-13 22:59:08,625 INFO 56496 [egg:core] dump config after ready, 5ms
+2019-08-13 23:00:22,096 WARN 56496 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:00:22,761 WARN 56496 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:00:21,892 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708421883.476,"ctimeMs":1565708421883.476,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:21.883Z","ctime":"2019-08-13T15:00:21.883Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:21,895 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708421883.476,"ctimeMs":1565708421883.476,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:21.883Z","ctime":"2019-08-13T15:00:21.883Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:22,560 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708422551.6902,"ctimeMs":1565708422551.6902,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:22.552Z","ctime":"2019-08-13T15:00:22.552Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:22,561 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708422551.6902,"ctimeMs":1565708422551.6902,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:22.552Z","ctime":"2019-08-13T15:00:22.552Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:23,608 WARN 56496 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:00:25,262 WARN 56496 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:00:34,245 WARN 56496 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:00:34,033 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":0,"atimeMs":1565263790474.6155,"mtimeMs":1565708434032.0647,"ctimeMs":1565708434032.0647,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:34.032Z","ctime":"2019-08-13T15:00:34.032Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:34,044 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708434033.0625,"ctimeMs":1565708434033.0625,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:34.033Z","ctime":"2019-08-13T15:00:34.033Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:35,326 WARN 56496 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:00:35,124 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708435117.1677,"ctimeMs":1565708435117.1677,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:35.117Z","ctime":"2019-08-13T15:00:35.117Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:35,125 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708435118.165,"ctimeMs":1565708435118.165,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:35.118Z","ctime":"2019-08-13T15:00:35.118Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:35,125 INFO 56496 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":346,"atimeMs":1565263790474.6155,"mtimeMs":1565708435118.165,"ctimeMs":1565708435118.165,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:00:35.118Z","ctime":"2019-08-13T15:00:35.118Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:00:35,739 WARN 56496 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:00:36,910 WARN 56496 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:00:45,900 INFO 61056 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-13 23:00:45,913 INFO 61056 [egg:core] dump config after load, 5ms
+2019-08-13 23:00:45,956 INFO 61056 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-13 23:00:45,956 INFO 61056 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-13 23:00:45,956 INFO 61056 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-13 23:00:45,956 INFO 61056 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-13 23:00:45,956 INFO 61056 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-13 23:00:45,956 INFO 61056 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-13 23:00:45,957 INFO 61056 [egg-watcher:agent] watcher start success
+2019-08-13 23:00:45,977 INFO 61056 [egg:core] dump config after ready, 7ms
+2019-08-13 23:01:07,217 WARN 61056 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:01:07,787 WARN 61056 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:01:07,013 INFO 61056 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":351,"atimeMs":1565263790474.6155,"mtimeMs":1565708467002.096,"ctimeMs":1565708467002.096,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:01:07.002Z","ctime":"2019-08-13T15:01:07.002Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:01:07,015 INFO 61056 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":351,"atimeMs":1565263790474.6155,"mtimeMs":1565708467002.096,"ctimeMs":1565708467002.096,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:01:07.002Z","ctime":"2019-08-13T15:01:07.002Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:01:07,557 INFO 61056 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":0,"atimeMs":1565263790474.6155,"mtimeMs":1565708467556.6167,"ctimeMs":1565708467556.6167,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:01:07.557Z","ctime":"2019-08-13T15:01:07.557Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:01:07,581 INFO 61056 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":351,"atimeMs":1565263790474.6155,"mtimeMs":1565708467572.5747,"ctimeMs":1565708467572.5747,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:01:07.573Z","ctime":"2019-08-13T15:01:07.573Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:01:08,981 WARN 61056 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:01:10,408 WARN 61056 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:01:24,515 INFO 43012 [egg:logger] init all loggers with options: {"dir":"F:\\egg-koa-compared\\egg\\logs\\project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-13 23:01:24,526 INFO 43012 [egg:core] dump config after load, 5ms
+2019-08-13 23:01:24,568 INFO 43012 [egg-watcher] Start watching: ["F:\\egg-koa-compared\\egg\\app","F:\\egg-koa-compared\\egg\\config","F:\\egg-koa-compared\\egg\\mocks","F:\\egg-koa-compared\\egg\\mocks_proxy","F:\\egg-koa-compared\\egg\\app.js"]
+2019-08-13 23:01:24,568 INFO 43012 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app"
+2019-08-13 23:01:24,568 INFO 43012 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\config"
+2019-08-13 23:01:24,568 INFO 43012 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks"
+2019-08-13 23:01:24,568 INFO 43012 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\mocks_proxy"
+2019-08-13 23:01:24,568 INFO 43012 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
+2019-08-13 23:01:24,569 INFO 43012 [egg-watcher:agent] watcher start success
+2019-08-13 23:01:24,584 INFO 43012 [egg:core] dump config after ready, 5ms
+2019-08-13 23:02:34,272 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":0,"atimeMs":1565707938143.0942,"mtimeMs":1565708554270.2888,"ctimeMs":1565708554270.2888,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:34.270Z","ctime":"2019-08-13T15:02:34.270Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:34,274 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":0,"atimeMs":1565707938143.0942,"mtimeMs":1565708554270.2888,"ctimeMs":1565708554270.2888,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:34.270Z","ctime":"2019-08-13T15:02:34.270Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:37,157 WARN 43012 [agent:development] reload worker because F:\egg-koa-compared\egg\app\controller\home.js change
+2019-08-13 23:02:36,901 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":0,"atimeMs":1565263790474.6155,"mtimeMs":1565708556899.274,"ctimeMs":1565708556899.274,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:02:36.899Z","ctime":"2019-08-13T15:02:36.899Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:36,950 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\controller\\home.js","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":844424930133141,"size":351,"atimeMs":1565263790474.6155,"mtimeMs":1565708556924.2085,"ctimeMs":1565708556924.2085,"birthtimeMs":1565263790474.6155,"atime":"2019-08-08T11:29:50.475Z","mtime":"2019-08-13T15:02:36.924Z","ctime":"2019-08-13T15:02:36.924Z","birthtime":"2019-08-08T11:29:50.475Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:38,733 WARN 43012 [ClusterClient:Connection] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-08-13 23:02:44,127 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":10296,"atimeMs":1565707938143.0942,"mtimeMs":1565708564125.9902,"ctimeMs":1565708564125.9902,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:44.126Z","ctime":"2019-08-13T15:02:44.126Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:44,128 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":10296,"atimeMs":1565707938143.0942,"mtimeMs":1565708564125.9902,"ctimeMs":1565708564125.9902,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:44.126Z","ctime":"2019-08-13T15:02:44.126Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:44,128 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":10296,"atimeMs":1565707938143.0942,"mtimeMs":1565708564125.9902,"ctimeMs":1565708564125.9902,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:44.126Z","ctime":"2019-08-13T15:02:44.126Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:46,016 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":10296,"atimeMs":1565707938143.0942,"mtimeMs":1565708566014.9497,"ctimeMs":1565708566014.9497,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:46.015Z","ctime":"2019-08-13T15:02:46.015Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:46,016 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":10296,"atimeMs":1565707938143.0942,"mtimeMs":1565708566014.9497,"ctimeMs":1565708566014.9497,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:46.015Z","ctime":"2019-08-13T15:02:46.015Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:02:46,016 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\10.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":1407374883601870,"size":10296,"atimeMs":1565707938143.0942,"mtimeMs":1565708566014.9497,"ctimeMs":1565708566014.9497,"birthtimeMs":1565707938143.0942,"atime":"2019-08-13T14:52:18.143Z","mtime":"2019-08-13T15:02:46.015Z","ctime":"2019-08-13T15:02:46.015Z","birthtime":"2019-08-13T14:52:18.143Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:03:21,129 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"F:\\egg-koa-compared\\egg\\app\\view\\100.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":2814749767153986,"size":0,"atimeMs":1565708601127.258,"mtimeMs":1565708601127.258,"ctimeMs":1565708601127.258,"birthtimeMs":1565708601127.258,"atime":"2019-08-13T15:03:21.127Z","mtime":"2019-08-13T15:03:21.127Z","ctime":"2019-08-13T15:03:21.127Z","birthtime":"2019-08-13T15:03:21.127Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:03:21,129 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view","stat":{"dev":2349207858,"mode":16822,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":3096224743865603,"size":0,"atimeMs":1565708601127.258,"mtimeMs":1565708601127.258,"ctimeMs":1565708601127.258,"birthtimeMs":1565707910168.698,"atime":"2019-08-13T15:03:21.127Z","mtime":"2019-08-13T15:03:21.127Z","ctime":"2019-08-13T15:03:21.127Z","birthtime":"2019-08-13T14:51:50.169Z"},"remove":false,"isDirectory":true,"isFile":false}
+2019-08-13 23:03:22,431 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\100.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":2814749767153986,"size":0,"atimeMs":1565708601127.258,"mtimeMs":1565708602430.7786,"ctimeMs":1565708602430.7786,"birthtimeMs":1565708601127.258,"atime":"2019-08-13T15:03:21.127Z","mtime":"2019-08-13T15:03:22.431Z","ctime":"2019-08-13T15:03:22.431Z","birthtime":"2019-08-13T15:03:21.127Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-08-13 23:03:22,433 INFO 43012 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"F:\\egg-koa-compared\\egg\\app\\view\\100.nj","stat":{"dev":2349207858,"mode":33206,"nlink":1,"uid":0,"gid":0,"rdev":0,"ino":2814749767153986,"size":102960,"atimeMs":1565708601127.258,"mtimeMs":1565708602432.7734,"ctimeMs":1565708602432.7734,"birthtimeMs":1565708601127.258,"atime":"2019-08-13T15:03:21.127Z","mtime":"2019-08-13T15:03:22.433Z","ctime":"2019-08-13T15:03:22.433Z","birthtime":"2019-08-13T15:03:21.127Z"},"remove":false,"isDirectory":false,"isFile":true}

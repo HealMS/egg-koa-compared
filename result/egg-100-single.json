@@ -1,0 +1,16 @@
+[
+	{"average":"580.32","min":"175.80","max":"4954.96","errors":"0.00","total":"3325.50","connections":1000,"title":"100","success2":1},
+	{"average":"806.70","min":"262.80","max":"4934.64","errors":"0.00","total":"3311.00","connections":2000,"title":"100","success":1},
+	{"average":"1211.22","min":"436.10","max":"4813.73","errors":"0.00","total":"3237.80","connections":3000,"title":"100","success":1},
+	{"average":"1557.66","min":"526.90","max":"4750.35","errors":"0.00","total":"3206.20","connections":4000,"title":"100","success":1},
+	{"average":"1631.74","min":"544.60","max":"4740.16","errors":"0.00","total":"3260.10","connections":5000,"title":"100","success":1},
+	{"average":"1835.58","min":"635.70","max":"4805.91","errors":"0.00","total":"3238.60","connections":6000,"title":"100","success":1},
+	{"average":"2164.05","min":"726.80","max":"4705.80","errors":"0.00","total":"3139.40","connections":7000,"title":"100","success":1},
+	{"average":"2340.70","min":"792.10","max":"4670.11","errors":"0.00","total":"3127.30","connections":8000,"title":"100","success":1},
+	{"average":"2511.54","min":"884.90","max":"4670.14","errors":"0.00","total":"3063.60","connections":9000,"title":"100","success":1},
+	{"average":"2535.16","min":"944.30","max":"4742.12","errors":"0.00","total":"3000.60","connections":10000,"title":"100","success":1},
+	{"average":"964.57","min":"288.70","max":"5162.02","errors":"0.00","total":"3094.60","connections":11000,"title":"100","success":1},
+	{"average":"1912.23","min":"1222.63","max":"5435.99","errors":"195.50","total":"1846.50","connections":12000,"title":"100","success":0.8941240184132142},
+	{"average":"9247.80","min":"8664.40","max":"14342.51","errors":"13362.60","total":"14510.60","connections":13000,"title":"100","success":0.07911457830827119},
+	{"average":"13646.73","min":"11392.83","max":"17309.95","errors":"18878.33","total":"20611.83","connections":14000,"title":"100","success":0.08410218791829739},
+	{"average":"35389.11","min":"31081.22","max":"44732.46","errors":"46609.78","total":"49196.89","connections":15000,"title":"100","success":0.052586860673510066}

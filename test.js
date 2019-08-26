@@ -1,28 +1,80 @@
 'use strict'
 
 const autocannon = require('autocannon')
-const reporter = require('autocannon-reporter')
+// const reporter = require('autocannon-reporter')
+const fs = require('fs');
+const util = require('util');
 const path = require('path')
+const dotenv = require('dotenv');
+dotenv.config({ path: './config.env' });
+const writeFile = util.promisify(fs.writeFile);
+const appendFile = util.promisify(fs.appendFile);
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+const batch_size = 30;
+const initConcurrent = 1000;
+const step = 1000;
+const duration = 5;
+const framework = process.env.framework;
+const pro = process.env.process;
+let final_result;
+let invalidDataCount;
 
-function makeAutocannon(param) {
-    autocannon(param).on('done', handleResults)
+
+function makeAutocannon(param, fn) {
+    return new Promise((resolve, reject) => {
+        autocannon(param).on('done', resolve)
+    }).then(fn);
+}
+
+async function oneBatchDone() {
+    for(let key in final_result) {
+        if (['connections', 'title'].indexOf(key) === -1) {
+            final_result[key] = (final_result[key]/(batch_size-invalidDataCount)).toFixed(2) || 0;
+        }
+    }
+    final_result.success = (final_result.total - final_result.errors) / final_result.total;
+    const reportOutputPath = path.resolve(__dirname, './result/template', `${framework}-${pro}-${final_result.title}.json`);
+    if (final_result.success < 0.1) {  //已达极限
+        return false;
+    }
+    try {
+        if (!fs.existsSync(reportOutputPath)) {
+            await writeFile(reportOutputPath, `[\n\t${JSON.stringify(final_result)}`);
+        } else {
+            await appendFile(reportOutputPath, `,\n\t${JSON.stringify(final_result)}`);
+        }
+        console.log('Report written to: ', reportOutputPath);
+    } catch (error) {
+        console.error(error);
+        return false;
+    }
+    return true;
 }
 
 function handleResults(result) {
     console.log(result);
-    // const reportOutputPath = path.join(`./result/${result.title}_report.html`)
-    // reporter.writeReport(reporter.buildReport(result), reportOutputPath, (err, res) => {
-    //     if (err) console.error('Error writting report: ', err)
-    //     else console.log('Report written to: ', reportOutputPath)
-    // })
+    if (!result.requests.total && result.errors) {
+        invalidDataCount++;
+        return;
+    }
+    const { latency: {average, min, max}, errors, '2xx': total, connections, title } = result;
+    const partOfResult = {average, min, max, errors, '2xx': total, total:total+errors, connections, title};
+    if (final_result == null) {
+        final_result = partOfResult;
+    } else {
+        for(let [key, val] of Object.entries(final_result)) {
+            if (['connections', 'title'].indexOf(key) === -1) {
+                final_result[key] = val + partOfResult[key];
+            }
+        }
+    }
 }
 
 // 请求参数
 const autocannonParam = {
     url: 'http://127.0.0.1:7001',
-    connections: 100,
-    duration: 5,
+    connections: initConcurrent,
+    duration,
     headers: {
         type: 'text/plain'
     }
@@ -48,13 +100,29 @@ async function run(sizeList) {
             ],
         }
     })
-    for (let i = 0; i < autocannonList.length; i++) {
-        if (i !== 0) {
-            await sleep((autocannonList[i - 1].duration) * 1000)
-            makeAutocannon(autocannonList[i])
-        } else {
-            makeAutocannon(autocannonList[i])
+    for (let i=0; i<autocannonList.length; i++) {  //批量处理不同size
+        for (;;) {  //并发数递增
+            console.log("current concurrents, file-size: ", autocannonList[i].connections, autocannonList[i].title);
+            final_result = null;
+            invalidDataCount = 0;
+            for (let j=0; j<batch_size; j++) {  //多次取平均值
+                if (j !== 0) {
+                    await sleep(10000);
+                    await makeAutocannon(autocannonList[i], handleResults)
+                } else {
+                    await makeAutocannon(autocannonList[i], handleResults)
+                }
+            }
+            const mostError = await oneBatchDone();
+            if (!mostError) break;
+            // if (autocannonList[i].connections < 13000) {
+            //     autocannonList[i].connections += 1000;
+            // } else {
+            //     autocannonList[i].connections += 100;
+            // }
+            autocannonList[i].connections += step;
         }
+        await writeFile(resolve(__dirname, './result/template', `${framework}-${pro}-${autocannonList[i].title}.json`), '\n]');  //json数组闭合
     }
 }
 // 启动
