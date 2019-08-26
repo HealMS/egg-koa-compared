@@ -11,8 +11,8 @@ const writeFile = util.promisify(fs.writeFile);
 const appendFile = util.promisify(fs.appendFile);
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const batch_size = 30;
-const initConcurrent = 1000;
-const step = 1000;
+const initConcurrent = Number(process.env.initConcurrent);
+const step = Number(process.env.step);
 const duration = 5;
 const framework = process.env.framework;
 const pro = process.env.process;
@@ -107,12 +107,17 @@ async function run(sizeList) {
             final_result = null;
             invalidDataCount = 0;
             for (let j=0; j<batch_size; j++) {  //多次取平均值
-                if (j !== 0) {
-                    await sleep(3000);
-                    await makeAutocannon(autocannonList[i], handleResults)
-                } else {
-                    await makeAutocannon(autocannonList[i], handleResults)
-                }
+                try {
+		    if (j !== 0) {
+                        await sleep(3000);
+                        await makeAutocannon(autocannonList[i], handleResults)
+                    } else {
+                        await makeAutocannon(autocannonList[i], handleResults)
+                    }
+		} catch (err) {
+		    console.error(err);
+		    return;
+		}
             }
             const mostError = await oneBatchDone();
             if (!mostError) break;
@@ -127,4 +132,4 @@ async function run(sizeList) {
     }
 }
 // 启动
-run(['10', '50', '100']);
+run(['50', '100']);
