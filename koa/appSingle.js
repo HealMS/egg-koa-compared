@@ -2,16 +2,18 @@ const Koa = require('koa');
 const nunjucks = require('nunjucks');
 const app = new Koa();
 
-nunjucks.configure('view', {
-  autoescape: true,
-  noCache: false
-});
+//const env = nunjucks.configure('view', {
+//  autoescape: true,
+//  noCache: false
+//});
+
+const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('view', { noCache: false }));
 
 app.use(async (ctx, next) => {
-    if (ctx.method === 'GET') {
+    if (ctx.method === 'GET' && ctx.query.size != null) {
         // let data = await readFile(resolve(__dirname, "../views", `${ctx.query.size}KB.js`));
         // ctx.body = data.toString();
-        ctx.body = await nunjucks.render(`${ctx.query.size}.nj`);
+        ctx.body = await env.render(`${ctx.query.size}.nj`);
     }
 });
 
