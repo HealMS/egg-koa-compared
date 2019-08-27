@@ -1,5 +1,5 @@
 exports.keys = `buliqiuqiudibuliduo`;
 
-exports.view = {
-    defaultViewEngine: 'nunjucks',
-};
+// exports.view = {
+//     defaultViewEngine: 'nunjucks',
+// };

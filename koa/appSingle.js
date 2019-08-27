@@ -11,8 +11,6 @@ const env = new nunjucks.Environment(new nunjucks.FileSystemLoader('view', { noC
 
 app.use(async (ctx, next) => {
     if (ctx.method === 'GET' && ctx.query.size != null) {
-        // let data = await readFile(resolve(__dirname, "../views", `${ctx.query.size}KB.js`));
-        // ctx.body = data.toString();
         ctx.body = await env.render(`${ctx.query.size}.nj`);
     }
 });
