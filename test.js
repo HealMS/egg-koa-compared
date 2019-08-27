@@ -120,16 +120,16 @@ async function run(sizeList) {
 		}
             }
             const mostError = await oneBatchDone();
-            if (!mostError) break;
             // if (autocannonList[i].connections < 13000) {
             //     autocannonList[i].connections += 1000;
             // } else {
             //     autocannonList[i].connections += 100;
             // }
             autocannonList[i].connections += step;
+            if (Number(autocannonList[i].connections) === 29000) break;
         }
         await writeFile(resolve(__dirname, './result/template', `${framework}-${pro}-${autocannonList[i].title}.json`), '\n]');  //json数组闭合
     }
 }
 // 启动
-run(['100']);
+run(['10', '50', '100']);
