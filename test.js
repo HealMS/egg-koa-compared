@@ -102,6 +102,7 @@ async function run(sizeList) {
         }
     })
     for (let i=0; i<autocannonList.length; i++) {  //批量处理不同size
+        autocannonList[i].connections = initConcurrent;
         for (;;) {  //并发数递增
             console.log("current concurrents, file-size: ", autocannonList[i].connections, autocannonList[i].title);
             final_result = null;
@@ -126,7 +127,10 @@ async function run(sizeList) {
             //     autocannonList[i].connections += 100;
             // }
             autocannonList[i].connections += step;
-            if (Number(autocannonList[i].connections) === 29000) break;
+            if (Number(autocannonList[i].connections) === 29000) {
+		console.log('break');
+		break;
+	    }
         }
         await writeFile(resolve(__dirname, './result/template', `${framework}-${pro}-${autocannonList[i].title}.json`), '\n]');  //json数组闭合
     }
