@@ -1,5 +1,4 @@
-
-],
+[
 	{"average":"45.38","min":"15.50","max":"4993.13","errors":"0.00","throughput":"74943528.96","2xx":"36023.70","total":"36023.70","connections":1000,"title":"10","success":1},
 	{"average":"78.89","min":"39.80","max":"4994.78","errors":"0.00","throughput":"73477106.35","2xx":"35320.20","total":"35320.20","connections":2000,"title":"10","success":1},
 	{"average":"115.50","min":"52.30","max":"4854.08","errors":"0.00","throughput":"72932611.42","2xx":"35057.57","total":"35057.57","connections":3000,"title":"10","success":1},

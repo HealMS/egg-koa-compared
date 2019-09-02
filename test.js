@@ -137,4 +137,4 @@ async function run(sizeList) {
     }
 }
 // 启动
-run(['10', '50', '100']);
+run(['100']);
