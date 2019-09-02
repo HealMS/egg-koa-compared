@@ -1699,3 +1699,83 @@ hostname: denislin-PC0
 2019-08-27 21:50:43,540 INFO 24740 [egg-watcher] Start watching: "F:\\egg-koa-compared\\egg\\app.js"
 2019-08-27 21:50:43,540 INFO 24740 [egg-watcher:agent] watcher start success
 2019-08-27 21:50:43,549 INFO 24740 [egg:core] dump config after ready, 4ms
+2019-08-28 18:13:36,860 INFO 2726 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:13:36,868 INFO 2726 [egg:core] dump config after load, 3ms
+2019-08-28 18:13:36,898 INFO 2726 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:13:36,898 INFO 2726 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:13:36,899 INFO 2726 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:13:36,899 INFO 2726 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:13:36,899 INFO 2726 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:13:36,899 INFO 2726 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:13:36,899 INFO 2726 [egg-watcher:agent] watcher start success
+2019-08-28 18:13:36,917 INFO 2726 [egg:core] dump config after ready, 3ms
+2019-08-28 18:14:42,694 INFO 2989 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:14:42,702 INFO 2989 [egg:core] dump config after load, 3ms
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:14:42,733 INFO 2989 [egg-watcher:agent] watcher start success
+2019-08-28 18:14:42,748 INFO 2989 [egg:core] dump config after ready, 2ms
+2019-08-28 18:16:20,787 INFO 3568 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:16:20,795 INFO 3568 [egg:core] dump config after load, 3ms
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:16:20,826 INFO 3568 [egg-watcher:agent] watcher start success
+2019-08-28 18:16:20,842 INFO 3568 [egg:core] dump config after ready, 3ms
+2019-08-28 18:18:03,231 INFO 4045 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:18:03,239 INFO 4045 [egg:core] dump config after load, 3ms
+2019-08-28 18:18:03,271 INFO 4045 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:18:03,271 INFO 4045 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:18:03,272 INFO 4045 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:18:03,272 INFO 4045 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:18:03,272 INFO 4045 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:18:03,272 INFO 4045 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:18:03,272 INFO 4045 [egg-watcher:agent] watcher start success
+2019-08-28 18:18:03,288 INFO 4045 [egg:core] dump config after ready, 2ms
+2019-08-28 18:19:16,643 INFO 4251 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:19:16,651 INFO 4251 [egg:core] dump config after load, 4ms
+2019-08-28 18:19:16,681 INFO 4251 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:19:16,681 INFO 4251 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:19:16,681 INFO 4251 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:19:16,682 INFO 4251 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:19:16,682 INFO 4251 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:19:16,682 INFO 4251 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:19:16,682 INFO 4251 [egg-watcher:agent] watcher start success
+2019-08-28 18:19:16,695 INFO 4251 [egg:core] dump config after ready, 3ms
+2019-08-28 18:20:05,066 INFO 4563 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:20:05,074 INFO 4563 [egg:core] dump config after load, 4ms
+2019-08-28 18:20:05,104 INFO 4563 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:20:05,104 INFO 4563 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:20:05,105 INFO 4563 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:20:05,105 INFO 4563 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:20:05,105 INFO 4563 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:20:05,105 INFO 4563 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:20:05,105 INFO 4563 [egg-watcher:agent] watcher start success
+2019-08-28 18:20:05,119 INFO 4563 [egg:core] dump config after ready, 2ms
+2019-08-28 18:24:43,792 INFO 5504 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-28 18:24:43,800 INFO 5504 [egg:core] dump config after load, 3ms
+2019-08-28 18:24:43,830 INFO 5504 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-28 18:24:43,830 INFO 5504 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-28 18:24:43,830 INFO 5504 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-28 18:24:43,831 INFO 5504 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-28 18:24:43,831 INFO 5504 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-28 18:24:43,831 INFO 5504 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-28 18:24:43,831 INFO 5504 [egg-watcher:agent] watcher start success
+2019-08-28 18:24:43,844 INFO 5504 [egg:core] dump config after ready, 3ms
+2019-08-29 12:31:15,148 INFO 20361 [egg:logger] init all loggers with options: {"dir":"/root/egg-koa-compared/egg/logs/project","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"project-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-08-29 12:31:15,158 INFO 20361 [egg:core] dump config after load, 5ms
+2019-08-29 12:31:15,188 INFO 20361 [egg-watcher] Start watching: ["/root/egg-koa-compared/egg/app","/root/egg-koa-compared/egg/config","/root/egg-koa-compared/egg/mocks","/root/egg-koa-compared/egg/mocks_proxy","/root/egg-koa-compared/egg/app.js"]
+2019-08-29 12:31:15,188 INFO 20361 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app"
+2019-08-29 12:31:15,189 INFO 20361 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/config"
+2019-08-29 12:31:15,189 INFO 20361 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks"
+2019-08-29 12:31:15,189 INFO 20361 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/mocks_proxy"
+2019-08-29 12:31:15,189 INFO 20361 [egg-watcher] Start watching: "/root/egg-koa-compared/egg/app.js"
+2019-08-29 12:31:15,189 INFO 20361 [egg-watcher:agent] watcher start success
+2019-08-29 12:31:15,203 INFO 20361 [egg:core] dump config after ready, 3ms

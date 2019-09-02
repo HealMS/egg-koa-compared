@@ -23,12 +23,13 @@ let invalidDataCount;
 function makeAutocannon(param, fn) {
     return new Promise((resolve, reject) => {
         autocannon(param).on('done', resolve)
-    }).then(fn);
+    }).then(fn).catch(err => console.log(err));
 }
 
 async function oneBatchDone() {
     for(let key in final_result) {
         if (['connections', 'title'].indexOf(key) === -1) {
+	    console.log(invalidDataCount);
             final_result[key] = (final_result[key]/(batch_size-invalidDataCount)).toFixed(2) || 0;
         }
     }
@@ -110,7 +111,7 @@ async function run(sizeList) {
             for (let j=0; j<batch_size; j++) {  //多次取平均值
                 try {
 		    if (j !== 0) {
-                        await sleep(3000);
+                        await sleep(10000);
                         await makeAutocannon(autocannonList[i], handleResults)
                     } else {
                         await makeAutocannon(autocannonList[i], handleResults)
@@ -132,7 +133,7 @@ async function run(sizeList) {
 		break;
 	    }
         }
-        await writeFile(resolve(__dirname, './result/template', `${framework}-${pro}-${autocannonList[i].title}.json`), '\n]');  //json数组闭合
+        await appendFile(path.resolve(__dirname, './result/template', `${framework}-${pro}-${autocannonList[i].title}.json`), '\n]');  //json数组闭合
     }
 }
 // 启动
