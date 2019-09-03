@@ -29,7 +29,7 @@ function makeAutocannon(param, fn) {
 async function oneBatchDone() {
     for(let key in final_result) {
         if (['connections', 'title'].indexOf(key) === -1) {
-	    console.log(invalidDataCount);
+	    console.log(batch_size - invalidDataCount);
             final_result[key] = (final_result[key]/(batch_size-invalidDataCount)).toFixed(2) || 0;
         }
     }
@@ -137,4 +137,4 @@ async function run(sizeList) {
     }
 }
 // 启动
-run(['100']);
+run(['10', '50', '100']);
